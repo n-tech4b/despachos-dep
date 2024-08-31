@@ -308,6 +308,21 @@ GTC EP – Supervisão de Pessoa Física – CAU/SP
 
         <script>
 
+
+            document.addEventListener('DOMContentLoaded', () => {
+                fetch('despacho.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        despacho.value = data.despacho;
+                    })
+                    .catch(error => console.error('Erro ao carregar o despacho:', error));
+            });
+
+            
+        </script>
+
+        <script>
+
             var despacho = new Jodit('#despacho', {
                 // Configurações do editor
                 minHeight: 300,
