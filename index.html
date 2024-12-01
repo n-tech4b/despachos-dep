@@ -246,14 +246,13 @@
    
 
                             <textarea id="despacho" class="form-control mb-3" rows="10" placeholder="Digite sua mensagem aqui...">
-                                <pre style="font-family: Verdana;" wrap="hard">
-<span>D </span><span id="n_despacho_causp">00</span>
+<span>D </span><span id="n_despacho_causp">00</span><BR>
 
-<p>RRT Nº XXXXXXXXXX</p>
-<p>Olá! Seu RRT foi analisado e <b>aprovado</b>, por delegação de competência da Comissão de Exercício Profissional do CAU/SP.</p>
+<div>RRT Nº XXXXXXXXXX</div><br>
 
-O registro e impressão do RRT Extemporâneo fica condicionado ao pagamento da <b>segunda taxa após aprovação</b>, conforme Resolução do CAU/BR nº 184 de 22 de novembro de 2019 - Art. 18, item II.
+<div>Olá! Seu RRT foi analisado e <b>aprovado</b>, por delegação de competência da Comissão de Exercício Profissional do CAU/SP.</div><br>
 
+O registro e impressão do RRT Extemporâneo fica condddicionado ao pagamento da <b>segunda taxa após aprovação</b>, conforme Resolução do CAU/BR nº 184 de 22 de novembro de 2019 - Art. 18, item II.
 A falta de pagamento desta taxa, dentro do prazo estipulado no boleto, inviabilizará a conclusão do RRT e sujeitará às cominações legais cabíveis no âmbito da Fiscalização do CAU/SP.
 <b>O boleto já pode ser gerado na página do RRT</b>.
 
@@ -267,7 +266,6 @@ Caso tenha dúvidas sobre outros assuntos, acesse o <a href='https://causp.gov.b
 
 Atenciosamente,
 Coordenação Técnica do Exercício Profissional – CAU/SP
-</pre>
                             </textarea>
 
                             <div class="mt-3 mb-4  text-center">
@@ -319,24 +317,61 @@ Coordenação Técnica do Exercício Profissional – CAU/SP
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
         
+        <!-- Inclua o script principal do Jodit -->
         <script src="https://cdn.jsdelivr.net/npm/jodit/build/jodit.min.js"></script>
+
     
         <!-- Inicializando o editor -->
 
         <script>
 
+            // var despacho = new Jodit('#despacho', {
+            //     // Configurações do editor
+            //     minHeight: 300,
+            //     buttons: [
+            //         'undo', 'redo', '|', 
+            //         'bold', 'italic', 'underline', 'strikethrough', '|', 
+            //         'align', 'outdent', 'indent', '|',
+            //         'ul', 'ol', '|',
+            //         'font', 'fontsize', 'brush', '|',
+            //         'table', 'link', 'image', '|',
+            //         'print', 'source', 'hr', 'removeformat'
+            
+            //     ]
+            // });
+
             var despacho = new Jodit('#despacho', {
-                // Configurações do editor
-                minHeight: 300,
-                buttons: [
-                    'bold', 'italic', 'underline', '|',
-                    'ul', 'ol', '|',
-                    'outdent', 'indent', '|',
-                    'font', 'fontsize', 'brush', '|',
-                    'link', 'image', '|',
-                    'align', 'undo', 'redo'
-                ]
-            });
+                "uploader": {
+                "insertImageAsBase64URI": true
+            },
+            // Configurações do editor
+            language: 'pt_br', // Define o idioma como português
+            maxHeight: 650,
+            enter: "DIV",
+            spellcheck: true,
+            showXPathInStatusbar: false,
+            askBeforePasteHTML: false,
+            askBeforePasteFromWord: false,
+            buttons: [
+                'undo', 'redo', '|',
+                'font','fontsize', 'eraser', '|',
+                'bold', 'italic', 'underline', 'strikethrough', 
+                'superscript', 'subscript', 'brush', '|',
+                'ul', 'ol', 'indent', 'outdent', 'align', 'lineHeight', 'paragraph', '|',
+                'table', 'hr', 'symbols', '|',
+                // 'classSpan', '|',
+                // 'file', 
+                'link', 'image', 'video', '|',
+                // 'cut', 'copy', 'paste', 
+                // 'copyformat', '|',
+                // 'ai-commands', 'ai-assistant', '|',
+                'find', 'spellcheck', 'selectall',
+                'source', 'preview', 'print', 'fullsize',
+                // 'about'
+            ]   
+        });
+
+
 
 
         </script>
