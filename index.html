@@ -8,15 +8,12 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-
         <!-- Jodit CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jodit/build/jodit.min.css">
         
-
         <title>Despachos PF</title>
         
         <style>
-
             
             html, body {
                 height: 100%; /* Garante que a altura total seja ocupada */
@@ -168,9 +165,8 @@
                         <div class="list-group">
 
                             <div class="row d-flex align-items-center mx-0">
-                                <h5 class="m-0 mt-2 mb-3 mr-2">RRTs Extemporâneo:</h5>
+                                <h5 class="m-0 mt-2 mb-3 mr-2">RRT Extemporâneo:</h5>
                             </div>
-
 
                             <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="index" href="index.html" style="background-color: #2b3a4d !important; color: #fff;">RRT Aprovado</a>
                             <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="rrts-02" href="rrts-02.html">RRT Aprovado (Retificador)</a>
@@ -242,19 +238,16 @@
 
                                 </div>
                             </div>
-
-   
+ 
 
                             <textarea id="despacho" class="form-control mb-3" rows="10" placeholder="Digite sua mensagem aqui...">
-<span>D </span><span id="n_despacho_causp">00</span><BR>
+<div style="white-space: pre-wrap; font-family: Verdana;" wrap="hard"><span>D </span><span id="n_despacho_causp">00</span>
 
-<div>RRT Nº XXXXXXXXXX</div><br>
+RRT Nº XXXXXXXXXX
 
-<div>Olá! Seu RRT foi analisado e <b>aprovado</b>, por delegação de competência da Comissão de Exercício Profissional do CAU/SP.</div><br>
+Olá! Seu RRT foi analisado e <b>aprovado</b>, por delegação de competência da Comissão de Exercício Profissional do CAU/SP.
 
-O registro e impressão do RRT Extemporâneo fica condddicionado ao pagamento da <b>segunda taxa após aprovação</b>, conforme Resolução do CAU/BR nº 184 de 22 de novembro de 2019 - Art. 18, item II.
-A falta de pagamento desta taxa, dentro do prazo estipulado no boleto, inviabilizará a conclusão do RRT e sujeitará às cominações legais cabíveis no âmbito da Fiscalização do CAU/SP.
-<b>O boleto já pode ser gerado na página do RRT</b>.
+O registro e impressão do RRT Extemporâneo fica condicionado ao pagamento da <b>segunda taxa após aprovação</b>, conforme Resolução do CAU/BR nº 184 de 22 de novembro de 2019 - Art. 18, item II. A falta de pagamento desta taxa, dentro do prazo estipulado no boleto, inviabilizará a conclusão do RRT e sujeitará às cominações legais cabíveis no âmbito da Fiscalização do CAU/SP. <b>O boleto já pode ser gerado na página do RRT</b>.
 
 Informamos que é de responsabilidade do(a) Arquiteto(a) e Urbanista assegurar que as informações registradas no RRT são verídicas.
 
@@ -266,6 +259,7 @@ Caso tenha dúvidas sobre outros assuntos, acesse o <a href='https://causp.gov.b
 
 Atenciosamente,
 Coordenação Técnica do Exercício Profissional – CAU/SP
+</div>
                             </textarea>
 
                             <div class="mt-3 mb-4  text-center">
@@ -278,9 +272,10 @@ Coordenação Técnica do Exercício Profissional – CAU/SP
 
                     <!-- Right Sidebar -->
                     <div class="col-md-2 px-2 mb-4">
-                        <div class="list-group rounded">
+
+                        <div class="list-group rounded mb-3">
                             <div class="row d-flex align-items-center mx-0">
-                                <h5 class="m-0 mt-2 mb-3 mr-2">RRTs Exterior:</h5>
+                                <h5 class="m-0 mt-2 mb-3 mr-2">RRT Exterior:</h5>
                             </div>
                             <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="exterior-01" href="exterior-01.html">Aprovado</a>
                             <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="exterior-02" href="exterior-02.html">Aprovado Retificador</a>
@@ -289,20 +284,25 @@ Coordenação Técnica do Exercício Profissional – CAU/SP
                             <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="exterior-05" href="exterior-05.html">Emitido por Engano</a>
                             <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="exterior-06" href="exterior-06.html">Dados Divergentes</a>            
                         </div>
+
+                        <div class="row d-flex align-items-center mx-0">
+                            <h5 class="m-0 mt-2 mb-3 mr-2">RRT Derivado:</h5>
+                        </div>
+                        <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="exterior-01" href="exterior-01.html">Aprovado</a>
+                        <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="exterior-02" href="exterior-02.html">Aprovado Retificador</a>
+                        <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="exterior-03" href="exterior-03.html">Sem Documentos</a>
+                        <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="exterior-04" href="exterior-04.html">Sem Tradução</a>
+                        <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="exterior-05" href="exterior-05.html">Emitido por Engano</a>
+                        <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="exterior-06" href="exterior-06.html">Dados Divergentes</a>  
+
+                    </div>
+
                     </div>
                     
                 </div>
             </div>
 
-
-
-
         </main>
-
-
-
-
-
 
         <!--------------------------------------- footer  ---------------------------------------->
 
@@ -320,7 +320,6 @@ Coordenação Técnica do Exercício Profissional – CAU/SP
         <!-- Inclua o script principal do Jodit -->
         <script src="https://cdn.jsdelivr.net/npm/jodit/build/jodit.min.js"></script>
 
-    
         <!-- Inicializando o editor -->
 
         <script>
@@ -343,43 +342,56 @@ Coordenação Técnica do Exercício Profissional – CAU/SP
             var despacho = new Jodit('#despacho', {
                 "uploader": {
                 "insertImageAsBase64URI": true
-            },
-            // Configurações do editor
-            language: 'pt_br', // Define o idioma como português
-            maxHeight: 650,
-            enter: "DIV",
-            spellcheck: true,
-            showXPathInStatusbar: false,
-            askBeforePasteHTML: false,
-            askBeforePasteFromWord: false,
-            buttons: [
-                'undo', 'redo', '|',
-                'font','fontsize', 'eraser', '|',
-                'bold', 'italic', 'underline', 'strikethrough', 
-                'superscript', 'subscript', 'brush', '|',
-                'ul', 'ol', 'indent', 'outdent', 'align', 'lineHeight', 'paragraph', '|',
-                'table', 'hr', 'symbols', '|',
-                // 'classSpan', '|',
-                // 'file', 
-                'link', 'image', 'video', '|',
-                // 'cut', 'copy', 'paste', 
-                // 'copyformat', '|',
-                // 'ai-commands', 'ai-assistant', '|',
-                'find', 'spellcheck', 'selectall',
-                'source', 'preview', 'print', 'fullsize',
-                // 'about'
-            ]   
-        });
-
-
-
+                },
+                // Configurações do editor
+                language: 'pt_br', // Define o idioma como português
+                maxHeight: 650,
+                enter: "BR",
+                spellcheck: true,
+                showXPathInStatusbar: false,
+                askBeforePasteHTML: false,
+                askBeforePasteFromWord: false,
+                buttons: [
+                    'undo', 'redo', '|',
+                    'font','fontsize', 'eraser', '|',
+                    'bold', 'italic', 'underline', 'strikethrough', 
+                    'superscript', 'subscript', 'brush', '|',
+                    // 'ul', 'ol', 'indent', 'outdent', 'align', 'lineHeight', 'paragraph', '|',
+                    'table', 'hr', 'symbols', '|',
+                    // 'classSpan', '|',
+                    // 'file', 
+                    'link', 'image', 'video', '|',
+                    // 'cut', 'copy', 'paste', 
+                    // 'copyformat', '|',
+                    // 'ai-commands', 'ai-assistant', '|',
+                    'find', 'spellcheck', 'selectall', 'copy', 
+                    'source', 'preview', 'print', 'fullsize', 
+                    // 'about'
+                ]   
+            });
 
         </script>
 
         <script>
 
+        // document.getElementById('copyButton').addEventListener('click', function() {
+        //     var content = despacho.value; // Obtém o conteúdo do editor Jodit
+        //     console.log(content)
+            
+        //     // Cria um elemento textarea temporário para copiar o conteúdo
+        //     var tempTextArea = document.createElement('textarea');
+        //     tempTextArea.value = content;
+        //     document.body.appendChild(tempTextArea);
+        //     tempTextArea.select();
+        //     document.execCommand('copy');
+        //     document.body.removeChild(tempTextArea);
+        // });
+
         document.getElementById('copyButton').addEventListener('click', function() {
             var content = despacho.value; // Obtém o conteúdo do editor Jodit
+            
+            // Substitui as tags <br> por quebras de linha
+            content = content.replace(/<br\s*\/?>/gi, '\n');
             
             // Cria um elemento textarea temporário para copiar o conteúdo
             var tempTextArea = document.createElement('textarea');
@@ -389,10 +401,12 @@ Coordenação Técnica do Exercício Profissional – CAU/SP
             document.execCommand('copy');
             document.body.removeChild(tempTextArea);
 
-            // Opcional: Mostrar uma mensagem de confirmação
-            alert('Conteúdo copiado para a área de transferência!');
+            console.log('Texto copiado com quebras de linha:', content);
         });
 
+        document.getElementById('updateButton').addEventListener('click', function() {
+            location.reload(); // Esta linha recarrega a página
+        });
 
 
         function RedirecionarRRTs() {
@@ -422,7 +436,6 @@ Coordenação Técnica do Exercício Profissional – CAU/SP
             window.open('siccau-01.html', '_self');
         }
 
-
         document.addEventListener("DOMContentLoaded", function() {
             // Seleciona todos os inputs do tipo rádio
             const radioButtons = document.querySelectorAll('input[type="radio"][name="options"]');
@@ -451,13 +464,7 @@ Coordenação Técnica do Exercício Profissional – CAU/SP
             });
         });
 
-        </script>
-
-
-        
-
-
-
+        </script>  
 
     </body>
 </html>
