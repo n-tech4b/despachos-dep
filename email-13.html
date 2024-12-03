@@ -397,15 +397,15 @@ Segue abaixo link com mais informações sobre o RRT Extemporâneo.
 
         // Copia o conteúdo HTML para a área de transferência
         try {
-            document.execCommand('copy');
-            console.log('Conteúdo copiado com sucesso!');
-        } catch (err) {
-            console.error('Erro ao copiar:', err);
-        }
+                document.execCommand('copy');
+                console.log('Conteúdo copiado com sucesso!');
+            } catch (err) {
+                console.error('Erro ao copiar:', err);
+            }
 
-        // Remove o div temporário
-        document.body.removeChild(tempDiv);
-    });
+            // Remove o div temporário
+            document.body.removeChild(tempDiv);
+        });
 
         document.getElementById('updateButton').addEventListener('click', function() {
             location.reload(); // Esta linha recarrega a página
