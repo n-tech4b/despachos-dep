@@ -374,26 +374,38 @@ Segue abaixo link com mais informações sobre o RRT Extemporâneo.
         //     document.body.removeChild(tempTextArea);
         // });
 
-        document.getElementById('copyButton').addEventListener('click', function() {
-            var content = despacho.value; // Obtém o conteúdo do editor Jodit
-            
-            // Substitui as tags <div> específicas por nada (remove elas)
-            content = content.replace(/<div[^>]*style=["']white-space:\s*pre-wrap;\s*font-family:\s*Verdana;["'][^>]*>/gi, '');
-            content = content.replace(/<\/div>/gi, '');
+        document.getElementById('copyButton').addEventListener('click', function () {
+        // Obtém o conteúdo da textarea
+        const content = document.getElementById('despacho').value;
 
-            // Substitui as tags  por quebras de linha
-            content = content.replace(/<br\s*\/?>/gi, '\n');
-            
-            // Cria um elemento textarea temporário para copiar o conteúdo
-            var tempTextArea = document.createElement('textarea');
-            tempTextArea.value = content;
-            document.body.appendChild(tempTextArea);
-            tempTextArea.select();
+        // Cria um elemento de edição HTML invisível
+        const tempDiv = document.createElement('div');
+        tempDiv.style.position = 'absolute';
+        tempDiv.style.left = '-9999px'; // Fora da área visível
+        tempDiv.style.whiteSpace = 'pre-wrap'; // Mantém quebras de linha
+        tempDiv.innerHTML = content;
+
+        // Adiciona o div temporário ao DOM
+        document.body.appendChild(tempDiv);
+
+        // Seleciona o conteúdo do div
+        const range = document.createRange();
+        range.selectNodeContents(tempDiv);
+        const selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+
+        // Copia o conteúdo HTML para a área de transferência
+        try {
             document.execCommand('copy');
-            document.body.removeChild(tempTextArea);
+            console.log('Conteúdo copiado com sucesso!');
+        } catch (err) {
+            console.error('Erro ao copiar:', err);
+        }
 
-            console.log('Texto copiado com quebras de linha e sem tags <div>:', content);
-        });
+        // Remove o div temporário
+        document.body.removeChild(tempDiv);
+    });
 
         document.getElementById('updateButton').addEventListener('click', function() {
             location.reload(); // Esta linha recarrega a página
