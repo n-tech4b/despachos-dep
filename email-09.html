@@ -240,7 +240,7 @@
  
 
                             <textarea id="despacho" class="form-control mb-3" rows="10" placeholder="Digite sua mensagem aqui...">
-<div style="white-space: pre-wrap; font-family: Verdana;" wrap="hard">Prezado(a) profissional, bom dia / boa tarde.
+<div style="white-space: pre-wrap; font-family: Arial;" wrap="hard">Prezado(a) profissional, bom dia / boa tarde.
 
 Para a baixa do RRT, é necessário informar a data em que a atividade foi concluída.
     
@@ -381,7 +381,7 @@ Dada a permissão, basta elaborar o RRT Retificador e realizar a baixa posterior
             var content = despacho.value; // Obtém o conteúdo do editor Jodit
             
             // Substitui as tags <div> específicas por nada (remove elas)
-            content = content.replace(/<div[^>]*style=["']white-space:\s*pre-wrap;\s*font-family:\s*Verdana;["'][^>]*>/gi, '');
+            content = content.replace(/<div[^>]*style=["']white-space:\s*pre-wrap;\s*font-family:\s*Arial;["'][^>]*>/gi, '');
             content = content.replace(/<\/div>/gi, '');
 
             // Substitui as tags  por quebras de linha

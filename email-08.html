@@ -240,7 +240,7 @@
  
 
                             <textarea id="despacho" class="form-control mb-3" rows="10" placeholder="Digite sua mensagem aqui...">
-<div style="white-space: pre-wrap; font-family: Verdana;" wrap="hard">Prezado(a) profissional, bom dia / boa tarde.
+<div style="white-space: pre-wrap; font-family: Arial;" wrap="hard">Prezado(a) profissional, bom dia / boa tarde.
 
 Para que seu RDA seja aprovado, será necessário atender a todos os itens abaixo:
 
@@ -392,7 +392,7 @@ Caso as peças gráficas contidas não sejam visualizáveis em A4, solicitamos q
             var content = despacho.value; // Obtém o conteúdo do editor Jodit
             
             // Substitui as tags <div> específicas por nada (remove elas)
-            content = content.replace(/<div[^>]*style=["']white-space:\s*pre-wrap;\s*font-family:\s*Verdana;["'][^>]*>/gi, '');
+            content = content.replace(/<div[^>]*style=["']white-space:\s*pre-wrap;\s*font-family:\s*Arial;["'][^>]*>/gi, '');
             content = content.replace(/<\/div>/gi, '');
 
             // Substitui as tags  por quebras de linha

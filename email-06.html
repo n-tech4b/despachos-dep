@@ -240,7 +240,7 @@
  
 
                             <textarea id="despacho" class="form-control mb-3" rows="10" placeholder="Digite sua mensagem aqui...">
-<div style="white-space: pre-wrap; font-family: Verdana;" wrap="hard">Nome do profissional:
+<div style="white-space: pre-wrap; font-family: Arial;" wrap="hard">Nome do profissional:
 Nº de CAU:
 Nº do documento: 
 Descrição: (fazer uma descrição assertiva do caso)                    
@@ -372,7 +372,7 @@ Descrição: (fazer uma descrição assertiva do caso)
             var content = despacho.value; // Obtém o conteúdo do editor Jodit
             
             // Substitui as tags <div> específicas por nada (remove elas)
-            content = content.replace(/<div[^>]*style=["']white-space:\s*pre-wrap;\s*font-family:\s*Verdana;["'][^>]*>/gi, '');
+            content = content.replace(/<div[^>]*style=["']white-space:\s*pre-wrap;\s*font-family:\s*Arial;["'][^>]*>/gi, '');
             content = content.replace(/<\/div>/gi, '');
 
             // Substitui as tags  por quebras de linha
