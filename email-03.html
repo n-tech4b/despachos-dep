@@ -239,11 +239,11 @@
                             </div>
  
 
-                            <textarea id="despacho" class="form-control mb-3" rows="10" placeholder="Digite sua mensagem aqui...">
-<div style="white-space: pre-wrap; font-family: Arial;" wrap="hard">Prezado(a) profissional, bom dia / boa tarde.
+                            <textarea id="" class="form-control mb-3" rows="10" placeholder="Digite sua mensagem aqui...">
+Prezado(a) profissional, bom dia / boa tarde.
 
 Seu RRT foi aprovado e já encontra-se registrado.            
-</div></textarea>
+                            </textarea>
 
                             <div class="mt-3 mb-4  text-center">
                                 <button class="btn btn-primary d-inline m-1" style="width: 90px" id="updateButton">Atualizar</button>
@@ -368,25 +368,15 @@ Seu RRT foi aprovado e já encontra-se registrado.
         //     document.body.removeChild(tempTextArea);
         // });
 
-        document.getElementById('copyButton').addEventListener('click', function() {
-            var content = despacho.value; // Obtém o conteúdo do editor Jodit
-            
-            // Substitui as tags <div> específicas por nada (remove elas)
-            content = content.replace(/<div[^>]*style=["']white-space:\s*pre-wrap;\s*font-family:\s*Arial;["'][^>]*>/gi, '');
-            content = content.replace(/<\/div>/gi, '');
-
-            // Substitui as tags  por quebras de linha
-            content = content.replace(/<br\s*\/?>/gi, '\n');
-            
-            // Cria um elemento textarea temporário para copiar o conteúdo
-            var tempTextArea = document.createElement('textarea');
-            tempTextArea.value = content;
-            document.body.appendChild(tempTextArea);
-            tempTextArea.select();
-            document.execCommand('copy');
-            document.body.removeChild(tempTextArea);
-
-            console.log('Texto copiado com quebras de linha e sem tags <div>:', content);
+        document.addEventListener("DOMContentLoaded", function() {
+            const copiarBotao = document.getElementById("copyButton");
+            const textarea = document.querySelector("textarea");
+    
+            copiarBotao.addEventListener("click", function() {
+                textarea.select();
+                document.execCommand("copy");
+                
+            });
         });
 
         document.getElementById('updateButton').addEventListener('click', function() {
