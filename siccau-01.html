@@ -82,6 +82,44 @@
 
             }
 
+            /* siccau */
+
+            table{
+            border-collapse: collapse;
+            border: 1px solid #ededed;
+            width: 300px;
+            }
+
+            tbody tr {
+            height: 25px;
+            
+            border-bottom: 1px solid #ededed;
+            font-size: 15px;
+            text-align: center;
+            }
+
+            .title {
+            background-color: #006f78;
+            height: 30px;
+            
+            color: #fff;
+            font-size: 18px;
+            }
+
+            a {
+                text-decoration: none;
+                color: white;
+                padding: 8px 4px;
+
+            }
+
+            a:hover {
+                
+                
+                background-color: #00474d94;
+
+            }
+
         </style>
 
     </head>
@@ -144,166 +182,367 @@
         <main>
             <div class="container-fluid my-4 text-center">
 
-                <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"  style="background-color:#2b3a4d;" onclick="RedirecionarRRTs()">RRTs</button>
+                <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"   onclick="RedirecionarRRTs()">RRTs</button>
                 <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"   onclick="RedirecionarCAT()">CAT-A</button>
                 <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"   onclick="RedirecionarRDA()">RDA</button>
-                <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"  onclick="RedirecionarStatusRRT()">STATUS RRT</button>
+                <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"   onclick="RedirecionarStatusRRT()">STATUS RRT</button>
                 <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"  onclick="RedirecionarInterrupcao()">INTERRUPÇÃO</button>
                 <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"  onclick="RedirecionarProtocolos()">PROTOCOLOS</button>
                 <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"  onclick="RedirecionarEmail()">E-MAIL</button>
                 <!-- <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"  onclick="RedirecionarDespachosGerais()">+ DESPACHOS</button> -->
-                <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"  onclick="RedirecionarSICCAU()">SICCAU</button>
+                <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline" style="background-color:#2b3a4d;" onclick="RedirecionarSICCAU()">SICCAU</button>
 
             </div>
 
             <hr>
 
-            <div class="container-fluid">
-                <div class="row">
-                    <!-- Left Sidebar -->
-                    <div class="col-md-2 px-2 mb-4">
-                        <div class="list-group">
-
-                            <div class="row d-flex align-items-center mx-0">
-                                <h5 class="m-0 mt-2 mb-3 mr-2">RRT Extemporâneo:</h5>
-                            </div>
-
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="index" href="index.html" style="background-color: #2b3a4d !important; color: #fff;">RRT Aprovado</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="rrts-02" href="rrts-02.html">RRT Aprovado (Retificador)</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="rrts-03" href="rrts-03.html">RRT Aprovado - Atestado Não Aprova na CAT-A</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="rrts-04" href="rrts-04.html">Dados Divergentes</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="rrts-05" href="rrts-05.html">Falta Documento</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="rrts-06" href="rrts-06.html">Falta Documentos de Cargo e Função</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="rrts-07" href="rrts-07.html">Falta Assinatura</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="rrts-08" href="rrts-08.html">Erro no Arquivo</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="rrts-09" href="rrts-09.html">Situação de Emergência</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="rrts-10" href="rrts-10.html">Atividade Não Contemplada</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="rrts-11" href="rrts-11.html">Mais de um Endereço</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="rrts-12" href="rrts-12.html">Atividade de Regularização</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="rrts-13" href="rrts-13.html">Outro responsável Técnico</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="rrts-14" href="rrts-14.html">Múltiplo Mensal</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="rrts-15" href="rrts-15.html">Cargo e Função - Não atende Salário Mínimo</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="rrts-16" href="rrts-16.html">RRT Social que Não Parece Social</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="rrts-17" href="rrts-17.html">Endereço Divergente</a>
+            <div  style="margin: 20px">
+                
+                <div style="float: left; margin: 0px 20px;">
+                    <table >
+                        <thead>
+                            <h4 style="text-align: center;">Unidade de Medida</h4>
                         
-                        </div>
-                    </div>
-
-                    <!-- Main Section -->
-                    <div class="col-md-8 px-2">
-                        <div class="container-fluid px-0">
-                            
-            
-                            <div class="row d-flex mb-2 align-items-center mx-0 ">
-                                
-                                <h5 class="m-0 mr-2">Despacho:</h5>
-                            
-                                <div class="btn-group btn-group-toggle P-0" data-toggle=""> 
-                                    <!-- btn-group-toggle -->
-
-                                    <label class="btn btn-info active">
-                                        <input type="radio" name="options" id="option0" autocomplete="off"> 00
-                                    </label>
-
-                                    <label class="btn btn-info">
-                                        <input type="radio" name="options" id="option1" autocomplete="off"> 01
-                                    </label>
-                                    <label class="btn btn-info">
-                                        <input type="radio" name="options" id="option2" autocomplete="off"> 02
-                                    </label>
-                                    <label class="btn btn-info">
-                                        <input type="radio" name="options" id="option3" autocomplete="off"> 03
-                                    </label>
-                                    <label class="btn btn-info">
-                                        <input type="radio" name="options" id="option4" autocomplete="off"> 04
-                                    </label>
-                                    <label class="btn btn-info">
-                                        <input type="radio" name="options" id="option5" autocomplete="off"> 05
-                                    </label>
-                                    <label class="btn btn-info">
-                                        <input type="radio" name="options" id="option6" autocomplete="off"> 06
-                                    </label>
-                                    <label class="btn btn-info">
-                                        <input type="radio" name="options" id="option7" autocomplete="off"> 07
-                                    </label>
-                                    <label class="btn btn-info">
-                                        <input type="radio" name="options" id="option8" autocomplete="off"> 08
-                                    </label>
-                                    <label class="btn btn-info">
-                                        <input type="radio" name="options" id="option9" autocomplete="off"> 09
-                                    </label>
-                                    <label class="btn btn-info">
-                                        <input type="radio" name="options" id="option10" autocomplete="off"> 10
-                                    </label>
-
-                                </div>
-                            </div>
- 
-
-                            <textarea id="despacho" class="form-control mb-3" rows="10" placeholder="Digite sua mensagem aqui...">
-<div style="white-space: pre-wrap; font-family: Verdana;" wrap="hard"><span>D </span><span id="n_despacho_causp">00</span>
-
-RRT Nº XXXXXXXXXX 
-
-Olá! Seu RRT foi analisado e <b>aprovado</b>, por delegação de competência da Comissão de Exercício Profissional do CAU/SP. 
-
-O registro e impressão do RRT Extemporâneo fica condicionado ao pagamento da <b>segunda taxa após aprovação</b>, conforme Resolução do CAU/BR nº 184 de 22 de novembro de 2019 - Art. 18, item II. 
-A falta de pagamento desta taxa, dentro do prazo estipulado no boleto, inviabilizará a conclusão do RRT e sujeitará às cominações legais cabíveis no âmbito da Fiscalização do CAU/SP. 
-<b>O boleto já pode ser gerado na página do RRT</b>. 
-
-Informamos que é de responsabilidade do(a) Arquiteto(a) e Urbanista assegurar que as informações registradas no RRT são verídicas.  
-
-Caso pretenda emitir CAT-A, será necessário atender ao disposto na Resolução Nº 93 – CAU/BR. 
-
-
-Caso tenha dúvidas sobre outros assuntos, acesse o <a href='https://causp.gov.br/atendimento/'>Canal de Atendimento</a> do CAU/SP.
-
-
-Atenciosamente,
-Coordenação Técnica do Exercício Profissional – CAU/SP
-</div>
-                            </textarea>
-
-                            <div class="mt-3 mb-4  text-center">
-                                <button class="btn btn-primary d-inline m-1" style="width: 90px" id="updateButton">Atualizar</button>
-                                <button class="btn btn-success d-inline m-1 " style="width: 90px" id="copyButton">Copiar</button>
-                            </div>
-                            
-                        </div>
-                    </div>
-
-                    <!-- Right Sidebar -->
-                    <div class="col-md-2 px-2 mb-4">
-
-                        <div class="list-group rounded mb-3">
-                            <div class="row d-flex align-items-center mx-0">
-                                <h5 class="m-0 mt-2 mb-3 mr-2">RRT Exterior:</h5>
-                            </div>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="exterior-01" href="exterior-01.html">Aprovado</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="exterior-02" href="exterior-02.html">Aprovado Retificador</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="exterior-03" href="exterior-03.html">Sem Documentos</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="exterior-04" href="exterior-04.html">Sem Tradução</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="exterior-05" href="exterior-05.html">Emitido por Engano</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="exterior-06" href="exterior-06.html">Dados Divergentes</a>            
-                        </div>
-
-                        <div class="row d-flex align-items-center mx-0">
-                            <h5 class="m-0 mt-2 mb-3 mr-2">RRT Derivado:</h5>
-                        </div>
-                        <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="exterior-01" href="derivado-01.html">Derivado Aprovado</a>
-                        <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="exterior-02" href="derivado-02.html">Falta ART</a>
-                        <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="exterior-03" href="derivado-03.html">Reficador</a>
-                        <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="exterior-04" href="derivado-04.html">Dados Divergentes</a>
-                        <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="exterior-05" href="derivado-05.html">Dados Divergentes (Retificador)</a>
-                        <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="exterior-06" href="derivado-06.html">Derivado Aprovado - Atestado Não Aprova na CAT-A</a>  
-
-                    </div>
-
-                    </div>
+                            <tr>
+                                <tr class="title">
+                                <th style="text-align: center;">Abreviação</th>
+                                <th style="text-align: center;">Descrição</th>
+                            </tr>
+                        </thead>
                     
+                        <tbody>
+                            <tr>
+                                <td>A</td>
+                                <td>Ampére</td>
+                            </tr>
+                            <tr>
+                                <td>d</td>
+                                <td>Dia</td>
+                            </tr>
+
+                            <tr>
+                                <td>db</td>
+                                <td>Decibél</td>
+                            </tr>
+                            <tr>
+                                <td>h</td>
+                                <td>Hora</td>
+                            </tr>
+                            <tr>
+                                <td>ha </td>
+                                <td>Hectare</td>
+                            </tr>
+                            <tr>
+                                <td>hab</td>
+                                <td>Habitantes</td>
+                            </tr>
+                            <tr>
+                                <td>h/d </td>
+                                <td>Hora/Dia</td>
+                            </tr>
+                            <tr>
+                                <td>hh</td>
+                                <td>Homem Hora</td>
+                            </tr>
+                            <tr>
+                                <td>h/m</td>
+                                <td>Hora por Mês</td>
+                            </tr>
+                            <tr>
+                                <td>h/sem</td>
+                                <td>Hora por Semana</td>
+                            </tr>
+                            <tr>
+                                <td>kg</td>
+                                <td>Quilograma</td>
+                            </tr>
+                            <tr>
+                                <td>kgf</td>
+                                <td>Quilograma Força</td>
+                            </tr>
+                            <tr>
+                                <td>km</td>
+                                <td>Quilômetro</td>
+                            </tr>
+                            <tr>
+                                <td>km²</td>
+                                <td>Quilômetro Quadrado</td>
+                            </tr>
+                            <tr>
+                                <td>kvA</td>
+                                <td>Quilovolt Ampére</td>
+                            </tr>
+                            <tr>
+                                <td>kW</td>
+                                <td>Quilowatt</td>
+                            </tr>
+                            <tr>
+                                <td>l</td>
+                                <td>Litro</td>
+                            </tr>
+                            <tr>
+                                <td>l/h</td>
+                                <td>Litro por Hora</td>
+                            </tr>
+                            <tr>
+                                <td>lm</td>
+                                <td>Lúmen</td>
+                            </tr>
+                            <tr>
+                                <td>lx</td>
+                                <td>Lux</td>
+                            </tr>
+                            <tr>
+                                <td>m</td>
+                                <td>Metro</td>
+                            </tr>
+                            <tr>
+                                <td>m²</td>
+                                <td>Metro Quadrado</td>
+                            </tr>
+                            <tr>
+                                <td>m³</td>
+                                <td>Metro Cúbico</td>
+                            </tr>
+                            <tr>
+                                <td>t</td>
+                                <td>Tonelada</td>
+                            </tr>
+                            <tr>
+                                <td>tr</td>
+                                <td>Tonelada Refrigeração</td>
+                            </tr>
+                            <tr>
+                                <td>un</td>
+                                <td>Unidade</td>
+                            </tr>
+                            <tr>
+                                <td>un/h</td>
+                                <td>Unidade por Hora</td>
+                            </tr>
+                            <tr>
+                                <td>v</td>
+                                <td>Volt</td>
+                            </tr>
+                            <tr>
+                                <td>w</td>
+                                <td>Watt</td>
+                            </tr>
+                        </tbody>
+                
+
+                    </table>
+
                 </div>
+
+                
+
+                <div style="float: left; margin: 0px 20px;">
+                    <table>
+                        <thead>
+                            <h4 style="text-align: center;">Tipo de Logradouro</h4>
+                        
+                            <tr>
+                                <tr class="title">
+                                <th style="text-align: center;">Descrição</th>
+                            </tr>
+                        </thead>
+                    
+                        <tbody>
+                            <tr>
+                                <td>Aeroporto</td>
+                            </tr>
+                            <tr>
+                                <td>Alameda</td>
+                            </tr>
+                            <tr>
+                                <td>Apartamento</td>
+                            </tr>
+                            <tr>
+                                <td>Área</td>
+                            </tr>
+                            <tr>
+                                <td>Área Especial</td>
+                            </tr>
+                            <tr>
+                                <td>Avenida</td>
+                            </tr>
+                            <tr>
+                                <td>Campo</td>
+                            </tr>
+                            <tr>
+                                <td>Chácara</td>
+                            </tr>
+                            <tr>
+                                <td>Colônia</td>
+                            </tr>
+                            <tr>
+                                <td>Condomínio</td>
+                            </tr>
+                            <tr>
+                                <td>Conjunto</td>
+                            </tr>
+                            <tr>
+                                <td>Distrito</td>
+                            </tr>
+                            <tr>
+                                <td>Esplanada</td>
+                            </tr>
+                            <tr>
+                                <td>Estação </td>
+                            </tr>
+                            <tr>
+                                <td>Estrada</td>
+                            </tr>
+                            <tr>
+                                <td>Favela</td>
+                            </tr>
+                            <tr>
+                                <td>Fazenda</td>
+                            </tr>
+                            <tr>
+                                <td>Feira</td>
+                            </tr>
+                            <tr>
+                                <td>Jardim</td>
+                            </tr>
+                            <tr>
+                                <td>Ladeira</td>
+                            </tr>
+                            <tr>
+                                <td>Lago</td>
+                            </tr>
+                            <tr>
+                                <td>Lagoa</td>
+                            </tr>
+                            <tr>
+                                <td>Largo</td>
+                            </tr>
+                            <tr>
+                                <td>Loteamento</td>
+                            </tr>
+                            <tr>
+                                <td>Morro</td>
+                            </tr>
+                            <tr>
+                                <td>Núcleo</td>
+                            </tr>
+                            <tr>
+                                <td>Parque</td>
+                            </tr>
+                            <tr>
+                                <td>Passarela</td>
+                            </tr>
+                            <tr>
+                                <td>Pátio</td>
+                            </tr>
+                            <tr>
+                                <td>Praça</td>
+                            </tr>
+                            <tr>
+                                <td>Quadra</td>
+                            </tr>
+                            <tr>
+                                <td>Recanto</td>
+                            </tr>
+                            <tr>
+                                <td>Residencial</td>
+                            </tr>
+                            <tr>
+                                <td>Rodovia</td>
+                            </tr>
+                            <tr>
+                                <td>Rua</td>
+                            </tr>
+                            <tr>
+                                <td>Setor</td>
+                            </tr>
+                            <tr>
+                                <td>Sítio</td>
+                            </tr>
+                            <tr>
+                                <td>Trecho</td>
+                            </tr>
+                            <tr>
+                                <td>Trevo</td>
+                            </tr>
+                            <tr>
+                                <td>Travessa</td>
+                            </tr>
+                            <tr>
+                                <td>Unidade</td>
+                            </tr>
+                            <tr>
+                                <td>Vale</td>
+                            </tr>
+                            <tr>
+                                <td>Vereda</td>
+                            </tr>
+                            <tr>
+                                <td>Via</td>
+                            </tr>
+                            <tr>
+                                <td>Viaduto</td>
+                            </tr>
+                            <tr>
+                                <td>Viela</td>
+                            </tr>
+                            <tr>
+                                <td>Vila</td>
+                            </tr>
+                            
+
+                            
+                        </tbody>
+                
+
+                    </table>
+
+                </div>
+
+                <div style="float: left; margin: 0px 20px;">
+                    <table style="width: 500px;">
+
+                        <thead>
+                            <h4 style="text-align: center;">SICCAU Antigo</h4>
+                        
+                            <tr>
+                                <tr class="title">
+                                <th style="text-align: center;">Link para acessar RRT no SICCAU antigo</th>
+                            </tr>
+                            
+                        </thead>
+                    
+                        <tbody>
+                            <tr>
+                                <td>
+                                    https://siccau.caubr.gov.br/app/view/sight/ini.php?form=ART&art_id=9123903
+                                    <!--
+                                    <a style="color: #006f78; background-color: #f7f8fa00;" href="https://siccau.caubr.gov.br/app/view/sight/ini.php?form=ART&art_id=9123903" target="_blank" >https://siccau.caubr.gov.br/app/view/sight/ini.php?form=ART&art_id=9123903</a>
+                                    -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Obs: alterar o ID do link para o ID do RRT, que deve ser retirado da página do RRT no SICCAU novo, também no link.</td>
+                            </tr>
+                            <tr>
+                                <td> ID NÃO É IGUAL AO NÚMERO DO RRT</td>
+                            </tr>
+                        
+                            
+                        
+                            
+                        </tbody>
+                
+
+                    </table>
+
+                </div>
+
+        
             </div>
 
+            <hr style="clear: both;">
         </main>
 
         <!--------------------------------------- footer  ---------------------------------------->

@@ -144,14 +144,14 @@
         <main>
             <div class="container-fluid my-4 text-center">
 
-                <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"  style="background-color:#2b3a4d;" onclick="RedirecionarRRTs()">RRTs</button>
+                <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"   onclick="RedirecionarRRTs()">RRTs</button>
                 <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"   onclick="RedirecionarCAT()">CAT-A</button>
                 <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"   onclick="RedirecionarRDA()">RDA</button>
                 <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"  onclick="RedirecionarStatusRRT()">STATUS RRT</button>
-                <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"  onclick="RedirecionarInterrupcao()">INTERRUPÇÃO</button>
+                <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"style="background-color:#2b3a4d;" onclick="RedirecionarInterrupcao()">INTERRUPÇÃO</button>
                 <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"  onclick="RedirecionarProtocolos()">PROTOCOLOS</button>
                 <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"  onclick="RedirecionarEmail()">E-MAIL</button>
-                <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"  onclick="RedirecionarDespachosGerais()">+ DESPACHOS</button>
+                <!-- <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"  onclick="RedirecionarDespachosGerais()">+ DESPACHOS</button> -->
                 <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"  onclick="RedirecionarSICCAU()">SICCAU</button>
 
             </div>
@@ -162,31 +162,31 @@
                 <div class="row">
                     <!-- Left Sidebar -->
                     <div class="col-md-2 px-2 mb-4">
-                        <div class="list-group">
+                        <div class="list-group mb-3">
 
                             <div class="row d-flex align-items-center mx-0">
-                                <h5 class="m-0 mt-2 mb-3 mr-2">RRT Extemporâneo:</h5>
+                                <h5 class="m-0 mt-2 mb-3 mr-2">Interrupção:</h5>
                             </div>
 
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="index" href="index.html" style="background-color: #2b3a4d !important; color: #fff;">RRT Aprovado</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="rrts-02" href="rrts-02.html">RRT Aprovado (Retificador)</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="rrts-03" href="rrts-03.html">RRT Aprovado - Atestado Não Aprova na CAT-A</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="rrts-05" href="rrts-05.html">Dados Divergentes</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="rrts-06" href="rrts-06.html">Falta Documento</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="rrts-07" href="rrts-07.html">Falta Documentos de Cargo e Função</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="rrts-08" href="rrts-08.html">Falta Assinatura</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="rrts-09" href="rrts-09.html">Erro no Arquivo</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="rrts-10" href="rrts-10.html">Situação de Emergência</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="rrts-11" href="rrts-11.html">Atividade Não Contemplada</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="rrts-12" href="rrts-12.html">Mais de um Endereço</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="rrts-13" href="rrts-13.html">Atividade de Regularização</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="rrts-14" href="rrts-14.html">Outro responsável Técnico</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="rrts-15" href="rrts-15.html">Múltiplo Mensal</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="rrts-16" href="rrts-16.html">Cargo e Função - Não atende Salário Mínimo</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="rrts-17" href="rrts-17.html">RRT Social que Não Parece Social</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="rrts-18" href="rrts-18.html">Endereço Divergente</a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="interrupcao-01" href="interrupcao-01.html">Interrupção Aprovada</a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="interrupcao-02" href="interrupcao-02.html">RRTs Sem Solicitação de Baixa</a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="interrupcao-03" href="interrupcao-03.html">Responsabilidade Técnica Ativa</a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="interrupcao-04" href="interrupcao-04.html" style="background-color: #2b3a4d !important; color: #fff;">Responsabilidade Técnica e RRT</a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="interrupcao-05" href="interrupcao-05.html">Processo Fiscalizatório ou Ético-Disciplinar em Tramitação</a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="interrupcao-06" href="interrupcao-06.html">Registro Provisório Vencido</a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="interrupcao-07" href="interrupcao-07.html">Registro já está Interrompido</a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="interrupcao-08" href="interrupcao-08.html">Protocolo de Cancelamento</a>
+                            
+    
                         
                         </div>
+
+                        <div class="row d-flex align-items-center mx-0">
+                            <h5 class="m-0 mt-2 mb-3 mr-2">Cancelamento:</h5>
+                        </div>
+                        <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="cancelamento-01" href="cancelamento-01.html">Cancelamento Aprovado (e-mail)</a>
+
+
                     </div>
 
                     <!-- Main Section -->
@@ -243,22 +243,36 @@
                             <textarea id="despacho" class="form-control mb-3" rows="10" placeholder="Digite sua mensagem aqui...">
 <div style="white-space: pre-wrap; font-family: Verdana;" wrap="hard"><span>D </span><span id="n_despacho_causp">00</span>
 
-RRT Nº XXXXXXXXXX
+Olá! Sua solicitação de Interrupção de registro <b>não será atendida no momento</b>, pois há <b>RRT(s) pendente(s)</b> e uma <b>responsabilidade técnica ativa</b> em nome da empresa XXXXXXXXXXXXXXXXXXXXXX. 
 
-Olá! Seu RRT foi analisado e <b>aprovado</b>, por delegação de competência da Comissão de Exercício Profissional do CAU/SP.
+<b>A baixa do RRT de Cargo e Função não efetua automaticamente a baixa da Responsabilidade Técnica pela empresa.</b>
+ 
+Para baixa de responsável técnico, acesse o SICCAU e, na página inicial, clique em: <b> Protocolo > Cadastrar Protocolo > Grupo de Assunto: Cadastro de Empresa > Assunto: Prorrogação, Baixa, Substituição e Inclusão de Responsável Técnico</b> e anexe um dos documentos abaixo, em conformidade com a Resolução Nº 28-CAU/BR:
+1 - Documento comprobatório de desvinculação entre as partes (distrato do contrato de prestação de serviços, com firma reconhecida das assinaturas); 
+2 - Termo de Homologação; 
+3 - Páginas da CTPS com o registro do desligamento; 
+4 - Alteração do contrato social com a saída do sócio (caso seja sócio).
+ 
+Todos os RRTs devem estar baixados, inclusive o de Cargo e Função.
 
-O registro e impressão do RRT Extemporâneo fica condicionado ao pagamento da <b>segunda taxa após aprovação</b>, conforme Resolução do CAU/BR nº 184 de 22 de novembro de 2019 - Art. 18, item II. A falta de pagamento desta taxa, dentro do prazo estipulado no boleto, inviabilizará a conclusão do RRT e sujeitará às cominações legais cabíveis no âmbito da Fiscalização do CAU/SP. <b>O boleto já pode ser gerado na página do RRT</b>.
+Em relação ao(s) RRT(s) pendente(s), pode(m) estar na aba “RRTs Registrados e Aptos a Baixa”, “RRTs Elaborados” ou “RRTs Elaborados Pendentes”. 
 
-Informamos que é de responsabilidade do(a) Arquiteto(a) e Urbanista assegurar que as informações registradas no RRT são verídicas.
+Se estiver em “RRTs Registrados e Aptos a Baixa”, o processo de baixa, cancelamento ou nulidade do RRT precisa ser solicitado e concluído para que a interrupção seja efetuada.  
+Se estiver nas demais abas, se a atividade não foi realizada, solicite o indeferimento do RRT. Se foi realizada, deverá finalizar o registro e pagamento de taxa, para posterior solicitação de baixa deste RRT. Caso se trate de um RRT Extemporâneo, o processo de aprovação precisará ser encerrado e, após aprovado, deverá efetuar o pagamento da taxa para posterior solicitação de baixa. 
 
-Caso pretenda emitir CAT-A, será necessário atender ao disposto na Resolução Nº 93 – CAU/BR. 
+Este protocolo será arquivado temporariamente.  
+Após a regularização do(s) RRT(s) e Responsabilidade Técnica, por gentileza, encaminhe um e-mail para: analisepf@causp.gov.br informando o número deste protocolo, para prosseguimento de análise. 
+O prazo para atendimento deste despacho é de <b>10 (dez) dias corridos</b>, conforme a Resolução Nº 167 – CAU/BR. 
+Passado este prazo, este protocolo será arquivado definitivamente, sendo necessário abrir um novo protocolo, caso queira prosseguir com a interrupção de registro. 
+
+Caso não queira mais interromper o registro, solicite através do mesmo e-mail o <b>desbloqueio do sistema</b>, informando o número deste protocolo.  
 
 
 Caso tenha dúvidas sobre outros assuntos, acesse o <a href='https://causp.gov.br/atendimento/'>Canal de Atendimento</a> do CAU/SP.
 
 
-Atenciosamente,
-Coordenação Técnica do Exercício Profissional – CAU/SP
+Atenciosamente, 
+Coordenação Técnica do Exercício Profissional – CAU/SP       
 </div>
                             </textarea>
 
@@ -275,25 +289,19 @@ Coordenação Técnica do Exercício Profissional – CAU/SP
 
                         <div class="list-group rounded mb-3">
                             <div class="row d-flex align-items-center mx-0">
-                                <h5 class="m-0 mt-2 mb-3 mr-2">RRT Exterior:</h5>
+                                <h5 class="m-0 mt-2 mb-3 mr-2">Reativação:</h5>
                             </div>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="exterior-01" href="exterior-01.html">Aprovado</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="exterior-02" href="exterior-02.html">Aprovado Retificador</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="exterior-03" href="exterior-03.html">Sem Documentos</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="exterior-04" href="exterior-04.html">Sem Tradução</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="exterior-05" href="exterior-05.html">Emitido por Engano</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="exterior-06" href="exterior-06.html">Dados Divergentes</a>            
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="reativacao-01" href="reativacao-01.html">Reativação Aprovada</a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="reativacao-02" href="reativacao-02.html">Registro Provisório</a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="reativacao-03" href="reativacao-03.html">Débitos Financeiros</a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="reativacao-04" href="reativacao-04.html">Mais de Uma Reativação no Ano - Pagamento da Taxa de Expediente</a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="reativacao-05" href="reativacao-05.html">Pendência da Interrupção de Registro</a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="reativacao-06" href="reativacao-06.html">Encaminhamento ao GFIN (Tramitação de Protocolo)</a>
+
+                                    
                         </div>
 
-                        <div class="row d-flex align-items-center mx-0">
-                            <h5 class="m-0 mt-2 mb-3 mr-2">RRT Derivado:</h5>
-                        </div>
-                        <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="exterior-01" href="exterior-01.html">Aprovado</a>
-                        <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="exterior-02" href="exterior-02.html">Aprovado Retificador</a>
-                        <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="exterior-03" href="exterior-03.html">Sem Documentos</a>
-                        <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="exterior-04" href="exterior-04.html">Sem Tradução</a>
-                        <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="exterior-05" href="exterior-05.html">Emitido por Engano</a>
-                        <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="exterior-06" href="exterior-06.html">Dados Divergentes</a>  
+
 
                     </div>
 
@@ -390,7 +398,7 @@ Coordenação Técnica do Exercício Profissional – CAU/SP
         document.getElementById('copyButton').addEventListener('click', function() {
             var content = despacho.value; // Obtém o conteúdo do editor Jodit
             
-            // Substitui as tags <br> por quebras de linha
+            // Substitui as tags  por quebras de linha
             content = content.replace(/<br\s*\/?>/gi, '\n');
             
             // Cria um elemento textarea temporário para copiar o conteúdo

@@ -144,14 +144,14 @@
         <main>
             <div class="container-fluid my-4 text-center">
 
-                <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"  style="background-color:#2b3a4d;" onclick="RedirecionarRRTs()">RRTs</button>
+                <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"   onclick="RedirecionarRRTs()">RRTs</button>
                 <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"   onclick="RedirecionarCAT()">CAT-A</button>
-                <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"   onclick="RedirecionarRDA()">RDA</button>
+                <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline" style="background-color:#2b3a4d;"  onclick="RedirecionarRDA()">RDA</button>
                 <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"  onclick="RedirecionarStatusRRT()">STATUS RRT</button>
                 <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"  onclick="RedirecionarInterrupcao()">INTERRUPÇÃO</button>
                 <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"  onclick="RedirecionarProtocolos()">PROTOCOLOS</button>
                 <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"  onclick="RedirecionarEmail()">E-MAIL</button>
-                <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"  onclick="RedirecionarDespachosGerais()">+ DESPACHOS</button>
+                <!-- <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"  onclick="RedirecionarDespachosGerais()">+ DESPACHOS</button> -->
                 <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"  onclick="RedirecionarSICCAU()">SICCAU</button>
 
             </div>
@@ -165,26 +165,22 @@
                         <div class="list-group">
 
                             <div class="row d-flex align-items-center mx-0">
-                                <h5 class="m-0 mt-2 mb-3 mr-2">RRT Extemporâneo:</h5>
+                                <h5 class="m-0 mt-2 mb-3 mr-2">RDA:</h5>
                             </div>
 
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="index" href="index.html" style="background-color: #2b3a4d !important; color: #fff;">RRT Aprovado</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="rrts-02" href="rrts-02.html">RRT Aprovado (Retificador)</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="rrts-03" href="rrts-03.html">RRT Aprovado - Atestado Não Aprova na CAT-A</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="rrts-05" href="rrts-05.html">Dados Divergentes</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="rrts-06" href="rrts-06.html">Falta Documento</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="rrts-07" href="rrts-07.html">Falta Documentos de Cargo e Função</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="rrts-08" href="rrts-08.html">Falta Assinatura</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="rrts-09" href="rrts-09.html">Erro no Arquivo</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="rrts-10" href="rrts-10.html">Situação de Emergência</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="rrts-11" href="rrts-11.html">Atividade Não Contemplada</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="rrts-12" href="rrts-12.html">Mais de um Endereço</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="rrts-13" href="rrts-13.html">Atividade de Regularização</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="rrts-14" href="rrts-14.html">Outro responsável Técnico</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="rrts-15" href="rrts-15.html">Múltiplo Mensal</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="rrts-16" href="rrts-16.html">Cargo e Função - Não atende Salário Mínimo</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="rrts-17" href="rrts-17.html">RRT Social que Não Parece Social</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="rrts-18" href="rrts-18.html">Endereço Divergente</a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="status-01" href="status-01.html">Cancelamento Aprovado</a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="status-02" href="status-02.html">Nulidade Aprovada</a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="status-03" href="status-03.html">Baixa Aprovada</a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="status-04" href="status-04.html">Indeferimento Aprovado</a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="status-05" href="status-05.html">Baixa sem Data de Término</a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="status-06" href="status-06.html">Cancelamento e Nulidade Sem Motivo/Declaração</a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="status-07" href="status-07.html">Indeferimento Sem Motivo</a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="status-08" href="status-08.html">Baixa de Ofício</a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="status-09" href="status-09.html">Cancelamento Cargo e Função</a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="status-10" href="status-10.html" style="background-color: #2b3a4d !important; color: #fff;">Cancelamento E Nulidade RRT - 2 ou Mais Serviços</a>
+                            
+                            
+         
                         
                         </div>
                     </div>
@@ -243,22 +239,39 @@
                             <textarea id="despacho" class="form-control mb-3" rows="10" placeholder="Digite sua mensagem aqui...">
 <div style="white-space: pre-wrap; font-family: Verdana;" wrap="hard"><span>D </span><span id="n_despacho_causp">00</span>
 
-RRT Nº XXXXXXXXXX
+Olá! 
+Este RRT contém dois ou mais serviços. O cancelamento do RRT é para o caso em que <b>nenhuma</b> das atividades tenha sido realizada.
+Se alguma das atividades registradas no RRT foi realizada, é necessário retificar o RRT, para remover a atividade não realizada.<b>
+Para retificar o RRT, deverá abrir um protocolo com o assunto: PERMISSÃO DE RETIFICAÇÃO DE RRT BAIXADO, informando o número do RRT, o motivo e os dados a serem retificados (remoção de serviço não realizado do RRT) </b>. 
+Dada a permissão, basta elaborar o RRT Retificador. 
+ 
+De acordo com a Resolução CAU/BR Nº 91, devem ser explicitados os motivos do pedido de alteração do status do RRT. Para cada status, há requisitos específicos: 
 
-Olá! Seu RRT foi analisado e <b>aprovado</b>, por delegação de competência da Comissão de Exercício Profissional do CAU/SP.
+<b>1. Nulidade:</b> erro no preenchimento com impossibilidade de retificação; registro em duplicidade de RRTs; empréstimo de seu nome a terceiros; responsabilidade técnica inapropriadamente assumida; ou incompatibilidade entre as atividades técnicas realizadas e as do RRT, com a impossibilidade de retificação. 
+É preciso informar o <b>RRT em substituição</b> deste, que deverá estar registrado. 
 
-O registro e impressão do RRT Extemporâneo fica condicionado ao pagamento da <b>segunda taxa após aprovação</b>, conforme Resolução do CAU/BR nº 184 de 22 de novembro de 2019 - Art. 18, item II. A falta de pagamento desta taxa, dentro do prazo estipulado no boleto, inviabilizará a conclusão do RRT e sujeitará às cominações legais cabíveis no âmbito da Fiscalização do CAU/SP. <b>O boleto já pode ser gerado na página do RRT</b>.
+Em caso de erro de preenchimento, é possível efetuar a retificação do RRT, exceto para os seguintes dados: Datas de celebração e início, UF do endereço, alteração de grupo de atividades, alteração da modalidade do RRT e remoção de empresa contratada. 
+Se o dado incorreto não for um desses mencionados, retifique o RRT. Para isso, é preciso que abra um protocolo no SICCAU com o assunto: <b>Permissão de Retificação de RRT Baixado</b>. Na descrição, escreva o número do RRT, motivo e os dados que serão retificados. Dada a permissão, basta elaborar um RRT Retificador. 
+Se o dado estiver dentre os citados acima (não retificável), deverá elaborar um novo RRT e, após seu registro, deverá solicitar a <b>nulidade</b> deste, informando o número do novo RRT em substituição. 
 
-Informamos que é de responsabilidade do(a) Arquiteto(a) e Urbanista assegurar que as informações registradas no RRT são verídicas.
+<b>2. Cancelamento:</b> quando nenhuma das atividades contidas no RRT <b>não foram e não serão iniciadas</b>. 
+Neste caso, é preciso que preencha a <b>Declaração de Cancelamento</b> que consta neste <a href="https://causp.gov.br/wp-content/uploads/2023/03/DECLARACAO_DE_CANCELAMENTO_DE_RRT.pdf">link</a>. 
 
-Caso pretenda emitir CAT-A, será necessário atender ao disposto na Resolução Nº 93 – CAU/BR. 
+Encaminhe esta declaração para: analisepf@causp.gov.br informando o número deste RRT. 
+
+Um exemplo que comumente gera dúvidas sobre alteração de status: 
+
+Se a obra não foi iniciada, a atividade do RRT é projeto e o projeto foi realizado, a atividade do RRT foi realizada e o status do RRT deverá ser de BAIXA. Somente se o projeto não for realizado, deverá solicitar o cancelamento. Agora, se for RRT com as atividades de projeto e execução juntas, deverá retificar o RRT, removendo a atividade que não foi realizada, para posterior baixa. 
+
+<b>3. Baixa: </b>deve ser solicitada se a atividade foi parcialmente ou totalmente realizada por você. Neste caso, é preciso que informe a data de término da atividade. 
+Se você inseriu o status incorreto e deseja que seja alterado, basta fazer a solicitação pelo mesmo e-mail informado acima, atendendo aos requisitos para cada status (nulidade: RRT registrado em substituição; Cancelamento: declaração de cancelamento; Baixa: data de término da atividade). 
 
 
 Caso tenha dúvidas sobre outros assuntos, acesse o <a href='https://causp.gov.br/atendimento/'>Canal de Atendimento</a> do CAU/SP.
+ 
 
-
-Atenciosamente,
-Coordenação Técnica do Exercício Profissional – CAU/SP
+Atenciosamente, 
+Coordenação Técnica do Exercício Profissional – CAU/SP   
 </div>
                             </textarea>
 
@@ -273,27 +286,7 @@ Coordenação Técnica do Exercício Profissional – CAU/SP
                     <!-- Right Sidebar -->
                     <div class="col-md-2 px-2 mb-4">
 
-                        <div class="list-group rounded mb-3">
-                            <div class="row d-flex align-items-center mx-0">
-                                <h5 class="m-0 mt-2 mb-3 mr-2">RRT Exterior:</h5>
-                            </div>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="exterior-01" href="exterior-01.html">Aprovado</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="exterior-02" href="exterior-02.html">Aprovado Retificador</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="exterior-03" href="exterior-03.html">Sem Documentos</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="exterior-04" href="exterior-04.html">Sem Tradução</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="exterior-05" href="exterior-05.html">Emitido por Engano</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="exterior-06" href="exterior-06.html">Dados Divergentes</a>            
-                        </div>
-
-                        <div class="row d-flex align-items-center mx-0">
-                            <h5 class="m-0 mt-2 mb-3 mr-2">RRT Derivado:</h5>
-                        </div>
-                        <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="exterior-01" href="exterior-01.html">Aprovado</a>
-                        <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="exterior-02" href="exterior-02.html">Aprovado Retificador</a>
-                        <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="exterior-03" href="exterior-03.html">Sem Documentos</a>
-                        <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="exterior-04" href="exterior-04.html">Sem Tradução</a>
-                        <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="exterior-05" href="exterior-05.html">Emitido por Engano</a>
-                        <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="exterior-06" href="exterior-06.html">Dados Divergentes</a>  
+ 
 
                     </div>
 
@@ -390,7 +383,7 @@ Coordenação Técnica do Exercício Profissional – CAU/SP
         document.getElementById('copyButton').addEventListener('click', function() {
             var content = despacho.value; // Obtém o conteúdo do editor Jodit
             
-            // Substitui as tags <br> por quebras de linha
+            // Substitui as tags  por quebras de linha
             content = content.replace(/<br\s*\/?>/gi, '\n');
             
             // Cria um elemento textarea temporário para copiar o conteúdo
