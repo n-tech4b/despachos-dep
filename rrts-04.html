@@ -366,7 +366,7 @@ Coordenação Técnica do Exercício Profissional – CAU/SP
                     // 'copyformat', '|',
                     // 'ai-commands', 'ai-assistant', '|',
                     'find', 'spellcheck', 'selectall', 'copy', 
-                    'source', 'preview', 'print', 'fullsize', 
+                    'preview', 'print', 'fullsize', 
                     // 'about'
                 ]   
             });
@@ -389,11 +389,25 @@ Coordenação Técnica do Exercício Profissional – CAU/SP
         // });
 
         document.getElementById('copyButton').addEventListener('click', function() {
-            var content = despacho.value; // Obtém o conteúdo do editor Jodit
-            
+            // Obtém o conteúdo da área de texto
+            var content = despacho.value;
+
             // Substitui as tags <br> por quebras de linha
             content = content.replace(/<br\s*\/?>/gi, '\n');
-            
+
+            // Cria um contêiner temporário para manipular o HTML
+            var tempDiv = document.createElement('div');
+            tempDiv.innerHTML = content;
+
+            // Seleciona todas as células de tabela (<td>) e adiciona o estilo de borda
+            var cells = tempDiv.querySelectorAll('td');
+            cells.forEach(function(cell) {
+                cell.style.border = '1px solid'; // Adiciona uma borda preta de 1px
+            });
+
+            // Atualiza o conteúdo com o HTML modificado
+            content = tempDiv.innerHTML;
+
             // Cria um elemento textarea temporário para copiar o conteúdo
             var tempTextArea = document.createElement('textarea');
             tempTextArea.value = content;
@@ -402,8 +416,9 @@ Coordenação Técnica do Exercício Profissional – CAU/SP
             document.execCommand('copy');
             document.body.removeChild(tempTextArea);
 
-            console.log('Texto copiado com quebras de linha:', content);
+            console.log('Texto copiado com quebras de linha e bordas nas tabelas:', content);
         });
+
 
         document.getElementById('updateButton').addEventListener('click', function() {
             location.reload(); // Esta linha recarrega a página
