@@ -230,31 +230,24 @@
  
 
                             <textarea id="despacho" class="form-control mb-3" rows="10" placeholder="Digite sua mensagem aqui...">
-<div style="white-space: pre-wrap; font-family: Arial;" wrap="hard">Olá! O RRT Extemporâneo é o RRT emitido fora do prazo estabelecido na Resolução Nº 91 – CAU/BR: 
-
-<b>Atividades do Grupo 2 – Execução: </b>O RRT deverá ser efetuado antes do início da atividade; 
-
-<b>Atividades dos Grupos 1 – Projeto e 4 – Meio Ambiente e Planejamento Regional e Urbano, além das atividades 3.1 – Coordenação e Compatibilização de Projetos, 7.8.12 – Projeto de Sistema de Segurança e 7.8.13 – Projeto de Proteção Contra Incêndios: </b> O RRT deverá ser efetuado até o término da atividade ou: 
-a) até entrega final dos documentos técnicos, objeto do contrato, ao contratante;  
-b) antes de dar entrada e/ou protocolar em pessoa jurídica, pública ou privada, responsável pela análise e aprovação do projeto e/ou documento técnico, objeto do contrato; ou 
-c) antes da publicação ou divulgação dos documentos técnicos, objeto do contrato, em elementos de comunicação dirigido ao cliente e ao público em geral. 
-
-<b>Demais atividades e grupos de atividades: </b>O RRT deverá ser efetuado em até 30 dias contados da data de início da atividade e desde que seja antes da data de término da atividade. 
-
-Conforme a Resolução Nº 184 – CAU/BR, o RRT Extemporâneo requer o pagamento de duas taxas: 
-
-I – Taxa de expediente, no valor de 1 vez a taxa de RRT vigente (antes da análise); e 
-II – Taxa de RRT (após sua aprovação). 
-
-Caso o RRT seja objeto de um processo de fiscalização com o auto lavrado, a segunda taxa não será cobrada, visto que deverá haver o pagamento da multa de RRT. 
+Olá! <br>
+O RRT Extemporâneo é o RRT emitido fora do prazo estabelecido na Resolução Nº 91 – CAU/BR: <br><br>
+<b>Atividades do Grupo 2 – Execução: </b>O RRT deverá ser efetuado antes do início da atividade; <br><br>
+<b>Atividades dos Grupos 1 – Projeto e 4 – Meio Ambiente e Planejamento Regional e Urbano, além das atividades 3.1 – Coordenação e Compatibilização de Projetos, 7.8.12 – Projeto de Sistema de Segurança e 7.8.13 – Projeto de Proteção Contra Incêndios: </b> O RRT deverá ser efetuado até o término da atividade ou: <br>
+a) até entrega final dos documentos técnicos, objeto do contrato, ao contratante; <br> 
+b) antes de dar entrada e/ou protocolar em pessoa jurídica, pública ou privada, responsável pela análise e aprovação do projeto e/ou documento técnico, objeto do contrato; ou <br>
+c) antes da publicação ou divulgação dos documentos técnicos, objeto do contrato, em elementos de comunicação dirigido ao cliente e ao público em geral. <br><br>
+<b>Demais atividades e grupos de atividades: </b>O RRT deverá ser efetuado em até 30 dias contados da data de início da atividade e desde que seja antes da data de término da atividade. <br><br><br>
+Conforme a Resolução Nº 184 – CAU/BR, o RRT Extemporâneo requer o pagamento de duas taxas: <br><br>
+I – Taxa de expediente, no valor de 1 vez a taxa de RRT vigente (antes da análise); e <br>
+II – Taxa de RRT (após sua aprovação). <br><br><br>
+Caso o RRT seja objeto de um processo de fiscalização com o auto lavrado, a segunda taxa não será cobrada, visto que deverá haver o pagamento da multa de RRT. <br><br>
+Caso tenha dúvidas sobre outros assuntos, acesse o <a href='https://causp.gov.br/atendimento/'>Canal de Atendimento</a> do CAU/SP.<br><br><br>
 
 
-Caso tenha dúvidas sobre outros assuntos, acesse o <a href='https://causp.gov.br/atendimento/'>Canal de Atendimento</a> do CAU/SP.
-
-
-Atenciosamente, 
-Coordenação Técnica do Exercício Profissional – CAU/SP         
-</div></textarea>
+Atenciosamente, <br>
+Coordenação Técnica do Exercício Profissional – CAU/SP
+</textarea>
 
                             <div class="mt-3 mb-4  text-center">
                                 <button class="btn btn-primary d-inline m-1" style="width: 90px" id="updateButton">Atualizar</button>
@@ -334,17 +327,19 @@ Coordenação Técnica do Exercício Profissional – CAU/SP
                 // Configurações do editor
                 language: 'pt_br', // Define o idioma como português
                 maxHeight: 650,
-                enter: "BR",
+                enter: "br",
                 spellcheck: true,
                 showXPathInStatusbar: false,
-                askBeforePasteHTML: false,
+                askBeforePasteHTML: true,
                 askBeforePasteFromWord: false,
                 buttons: [
                     'undo', 'redo', '|',
                     'font','fontsize', 'eraser', '|',
                     'bold', 'italic', 'underline', 'strikethrough', 
                     'superscript', 'subscript', 'brush', '|',
-                    // 'ul', 'ol', 'indent', 'outdent', 'align', 'lineHeight', 'paragraph', '|',
+                    'ul', 'ol', 
+                    //'indent', 'outdent', 'align', 'lineHeight', 
+                    'paragraph', '|',
                     'table', 'hr', 'symbols', '|',
                     // 'classSpan', '|',
                     // 'file', 
@@ -352,35 +347,20 @@ Coordenação Técnica do Exercício Profissional – CAU/SP
                     // 'cut', 'copy', 'paste', 
                     // 'copyformat', '|',
                     // 'ai-commands', 'ai-assistant', '|',
-                    'find', 'spellcheck', 'selectall', 'copy', 
+                    'find', 'spellcheck', 
+                    //'selectall', 'copy', 
                     'preview', 'print', 'fullsize', 
                     // 'about'
-                ]   
+                ]
             });
 
         </script>
 
         <script>
 
-        // document.getElementById('copyButton').addEventListener('click', function() {
-        //     var content = despacho.value; // Obtém o conteúdo do editor Jodit
-        //     console.log(content)
-            
-        //     // Cria um elemento textarea temporário para copiar o conteúdo
-        //     var tempTextArea = document.createElement('textarea');
-        //     tempTextArea.value = content;
-        //     document.body.appendChild(tempTextArea);
-        //     tempTextArea.select();
-        //     document.execCommand('copy');
-        //     document.body.removeChild(tempTextArea);
-        // });
-
-        document.getElementById('copyButton').addEventListener('click', function() {
+        document.getElementById('copyButton').addEventListener('click', function () {
             // Obtém o conteúdo da área de texto
             var content = despacho.value;
-
-            // Substitui as tags <br> por quebras de linha
-            content = content.replace(/<br\s*\/?>/gi, '\n');
 
             // Cria um contêiner temporário para manipular o HTML
             var tempDiv = document.createElement('div');
@@ -392,18 +372,36 @@ Coordenação Técnica do Exercício Profissional – CAU/SP
                 cell.style.border = '1px solid'; // Adiciona uma borda preta de 1px
             });
 
-            // Atualiza o conteúdo com o HTML modificado
-            content = tempDiv.innerHTML;
+            // Remove espaços e quebras de linha desnecessárias (compacta o texto)
+            var compactedContent = tempDiv.innerHTML
+                .replace(/\s+/g, ' ')          // Substitui múltiplos espaços por um único
+                .replace(/>\s+</g, '><');     // Remove espaços entre tags HTML
 
-            // Cria um elemento textarea temporário para copiar o conteúdo
+            // Remove os trechos de <span> indesejados
+                var cleanedContent = compactedContent
+                .replace(/<span><span id="intro_despacho_causp">/g, '') // Remove a abertura específica
+                .replace(/<\/span><span id="n_despacho_causp">/g, '') // Remove a combinação específica
+                .replace(/<\/span><\/span>/g, ''); // Remove a combinação de fechamento
+
+            // Substitui <br> por <br>\n para exibição formatada
+            var formattedContent = cleanedContent.replace(/<br\s*\/?>/gi, '<br>\n');
+
+            // Remove espaços repetidos e espaços antes ou depois de quebras de linha
+            formattedContent = formattedContent
+                .replace(/[ \t]+/g, ' ')       // Remove múltiplos espaços ou tabulações
+                .replace(/(\n)[ ]+/g, '$1')   // Remove espaços após \n
+                .replace(/[ ]+(\n)/g, '$1')   // Remove espaços antes de \n
+                .trim();                       // Remove espaços extras no início e no final do texto
+
+            // Cria um elemento textarea temporário para copiar o conteúdo formatado
             var tempTextArea = document.createElement('textarea');
-            tempTextArea.value = content;
+            tempTextArea.value = formattedContent;
             document.body.appendChild(tempTextArea);
             tempTextArea.select();
             document.execCommand('copy');
             document.body.removeChild(tempTextArea);
 
-            console.log('Texto copiado com quebras de linha e bordas nas tabelas:', content);
+            console.log('Texto copiado (compactado e formatado):', formattedContent);
         });
 
 
