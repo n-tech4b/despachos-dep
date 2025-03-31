@@ -241,20 +241,41 @@
  
 
                             <textarea id="despacho" class="form-control mb-3" rows="10" placeholder="Digite sua mensagem aqui...">
-<span><span id="intro_despacho_causp">D </span><span id="n_despacho_causp">00</span></span><br><br>
+<div><span><span id="intro_despacho_causp">D </span><span id="n_despacho_causp">00</span></span></div>
+<br>
 
-RRT Nº XXXXXXXXXX 
-<br><br>
+<div>RRT Nº XXXXXXXXXX</div>
+<br>
 
-Olá! Conforme a Resolução 91 - CAU/BR, o RRT simples é composto por <b>1 único endereço</b>. Como a atividade menciona diversos endereços, deve ser emitido 1 RRT por endereço.<br><br>
+<div>Olá,</div>
+<br>
 
-Neste caso, você deve corrigir os dados deste RRT para um dos endereços e, posteriormente, emitir RRT para os demais endereços. <br><br>
+<div>Conforme a <a href="https://transparencia.caubr.gov.br/resolucao91/" target="_blank">Resolução nº 91 – CAU/BR</a>, o <strong>RRT Simples</strong> deve conter <strong>apenas um endereço</strong>.</div>
+<br>
 
-Caso tenha dúvidas sobre outros assuntos, acesse o <a href='https://causp.gov.br/atendimento/'>Canal de Atendimento</a> do CAU/SP.<br><br><br>
+<div>Como este RRT menciona <strong>diversos endereços</strong>, é necessário:</div>
+<br>
+
+<div>
+    <ol>
+        <li><strong>Corrigir este RRT</strong>, mantendo apenas <strong>um endereço</strong>.</li>
+        <li><strong>Emitir novos RRTs</strong> para os demais endereços.</li>
+    </ol>
+</div>
 
 
-Atenciosamente, <br>
-Coordenação Técnica do Exercício Profissional – CAU/SP
+<div>Este protocolo será <strong>arquivado temporariamente</strong> até que as correções sejam feitas. Se não souber como efetuar as correções no RRT, 
+    <a href="https://servicos.caubr.gov.br/helpdesk/lib/exe/fetch.php/tut_rrt_extemporaneo_-_como_corrigir_rrt_em_analise_r01.pdf" target="_blank">clique aqui</a> para acessar o tutorial.
+</div>
+<br>
+
+
+<div>
+    Dúvidas? Acesse o <a href="https://causp.gov.br/atendimento/" target="_blank">Canal de Atendimento</a> do CAU/SP.<br>
+</div><br><br>
+
+<div>Atenciosamente,</div>
+<div>Coordenação Técnica do Exercício Profissional – CAU/SP</div>
 </textarea>
 
                             <div class="mt-3 mb-4  text-center">
@@ -366,6 +387,10 @@ Coordenação Técnica do Exercício Profissional – CAU/SP
                     'preview', 'print', 'fullsize', 
                     // 'about'
                 ]
+                ,
+                style: {
+                fontSize: '14px'
+                },
             });
 
         </script>

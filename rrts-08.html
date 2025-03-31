@@ -241,28 +241,36 @@
  
 
                             <textarea id="despacho" class="form-control mb-3" rows="10" placeholder="Digite sua mensagem aqui...">
-<span><span id="intro_despacho_causp">D </span><span id="n_despacho_causp">00</span></span><br><br>
+<div><span><span id="intro_despacho_causp">D </span><span id="n_despacho_causp">00</span></span></div>
+<br>
 
-RRT Nº XXXXXXXXXX 
-<br><br>
+<div>RRT Nº XXXXXXXXXX</div>
+<br>
 
-Olá! Infelizmente ocorreu um erro sistêmico e o arquivo não está abrindo. Por gentileza, anexe o arquivo novamente. <br>
-<br><br>
+<div>Olá,</div>
+<br>
 
-O documento deve estar em formato PDF ou JPG, contendo <b>seu nome</b>. <br><br>
+<div>Houve um <strong>erro sistêmico</strong> e o arquivo enviado não pôde ser aberto. Por gentileza, <strong>anexe o arquivo novamente</strong> na página do RRT.</div>
+<br>
+
+<div>
+    Este protocolo será <strong>arquivado temporariamente</strong> até que as correções sejam feitas. Se não souber como efetuar as correções no RRT,     
+    <a href="https://servicos.caubr.gov.br/helpdesk/lib/exe/fetch.php/tut_rrt_extemporaneo_-_como_corrigir_rrt_em_analise_r01.pdf" target="_blank">clique aqui</a> para acessar o tutorial.
+</div>
+<br>
+
+<div>
+    <strong>Importante:</strong> Se anexar o documento ou tiver dúvidas sobre esta análise, envie um e-mail para <strong>analisepf@causp.gov.br</strong> informando o <u>número deste RRT</u> ou <u>protocolo</u>, o SICCAU não nos notifica automaticamente.
+</div>
+<br>
 
 
-Este protocolo será arquivado temporariamente, até que atenda ao solicitado. O documento deve ser anexado na página deste RRT. <br><br><br>
+<div>
+    Dúvidas? Acesse o <a href="https://causp.gov.br/atendimento/" target="_blank">Canal de Atendimento</a> do CAU/SP.<br>
+</div><br><br>
 
-Ao anexar o documento, por gentileza, nos informe da inclusão através do e-mail: analisepf@causp.gov.br informando o <b>número deste RRT</b>, para continuidade na análise. O SICCAU não está nos informando desta inclusão. <br><br>
-
-Se tiver dúvidas referentes a esta análise, entre em contato através do mesmo e-mail informado acima, descrevendo sua dúvida e o <b>número deste RRT</b>. <br><br>
-
-Caso tenha dúvidas sobre outros assuntos, acesse o <a href='https://causp.gov.br/atendimento/'>Canal de Atendimento</a> do CAU/SP.<br><br><br>
-
-
-Atenciosamente, <br>
-Coordenação Técnica do Exercício Profissional – CAU/SP
+<div>Atenciosamente,</div>
+<div>Coordenação Técnica do Exercício Profissional – CAU/SP</div>
 </textarea>
 
                             <div class="mt-3 mb-4  text-center">
@@ -374,6 +382,10 @@ Coordenação Técnica do Exercício Profissional – CAU/SP
                     'preview', 'print', 'fullsize', 
                     // 'about'
                 ]
+                ,
+                style: {
+                fontSize: '14px'
+                },
             });
 
         </script>

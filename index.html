@@ -242,25 +242,52 @@
  
 
                             <textarea id="despacho" class="form-control mb-3" rows="10" placeholder="Digite sua mensagem aqui...">
-<span><span id="intro_despacho_causp">D </span><span id="n_despacho_causp">00</span></span><br><br>
+<div><span><span id="intro_despacho_causp">D </span><span id="n_despacho_causp">00</span></span></div>
+<br>
 
-RRT Nº XXXXXXXXXX 
-<br><br>
+<div>RRT Nº XXXXXXXXXX</div>
+<br>
 
-Olá! Seu RRT foi analisado e <b>aprovado</b>, por delegação de competência da Comissão de Exercício Profissional do CAU/SP. <br><br>
+<div>Olá,</div>
+<br>
 
-O registro e impressão do RRT Extemporâneo fica condicionado ao pagamento da <b>segunda taxa após aprovação</b>, conforme Resolução do CAU/BR nº 184 de 22 de novembro de 2019 - Art. 18, item II. <br><br>
-A falta de pagamento desta taxa, dentro do prazo estipulado no boleto, inviabilizará a conclusão do RRT e sujeitará às cominações legais cabíveis no âmbito da Fiscalização do CAU/SP. <br><br>
-<b>O boleto já pode ser gerado na página do RRT</b>. <br><br>
+<div><strong>Seu RRT foi aprovado</strong> por delegação da Comissão de Exercício Profissional do CAU/SP. A veracidade das informações no RRT é de responsabilidade do(a) arquiteto(a) e urbanista.</div>
+<br>
 
-Informamos que é de responsabilidade do(a) Arquiteto(a) e Urbanista assegurar que as informações registradas no RRT são verídicas. <br> <br>
-
-Caso pretenda emitir CAT-A, será necessário atender ao disposto na Resolução Nº 93 – CAU/BR. <br><br><br>
-Caso tenha dúvidas sobre outros assuntos, acesse o <a href='https://causp.gov.br/atendimento/'>Canal de Atendimento</a> do CAU/SP.<br><br><br>
+<div>
+    📌 <strong>Próximo passo:</strong>
+</div>
 
 
-Atenciosamente, <br>
-Coordenação Técnica do Exercício Profissional – CAU/SP
+<div>
+    Para concluir o <strong>RRT Extemporâneo</strong>, é necessário pagar a <strong>segunda taxa</strong>, conforme a 
+    <a href="https://transparencia.caubr.gov.br/resolucao184/">Resolução CAU/BR Nº 184/2019 (Art. 18, II)</a>.
+</div>
+
+<div>
+    O botão para emitir o boleto já está disponível na página do RRT, caso tenha dúvidas, 
+    <a href="https://servicos.caubr.gov.br/helpdesk/lib/exe/fetch.php/tut_rrt_extemporaneo_-_como_gerar_o_segundo_boleto_r01.pdf">clique aqui</a> para acessar o tutorial.
+</div>
+<br>
+
+<div>
+    <strong>Atenção:</strong> O não pagamento dentro do prazo impedirá a conclusão do RRT e poderá gerar sanções fiscais.
+</div>
+<br>
+
+<div>
+    Se tiver intenção de emitir uma <strong>CAT-A</strong>, consulte a 
+    <a href="https://transparencia.caubr.gov.br/resolucao93/" target="_blank">Resolução CAU/BR Nº 93/2014</a> e nosso 
+    <a href="https://causp.gov.br/wp-content/uploads/2025/02/CAT-A.pdf" target="_blank">Manual de CAT-A</a>.
+</div>
+<br>
+
+<div>
+    Dúvidas? Acesse o <a href="https://causp.gov.br/atendimento/" target="_blank">Canal de Atendimento</a> do CAU/SP.<br>
+</div><br><br>
+
+<div>Atenciosamente,</div>
+<div>Coordenação Técnica do Exercício Profissional – CAU/SP</div>
 </textarea>
                             <div class="mt-3 mb-4  text-center">
                                 <button class="btn btn-primary d-inline m-1" style="width: 90px" id="updateButton">Atualizar</button>
@@ -371,6 +398,10 @@ Coordenação Técnica do Exercício Profissional – CAU/SP
                     'preview', 'print', 'fullsize', 
                     // 'about'
                 ]
+                ,
+                style: {
+                fontSize: '14px'
+                },
             });
 
         </script>

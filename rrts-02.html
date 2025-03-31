@@ -241,23 +241,37 @@
  
 
                             <textarea id="despacho" class="form-control mb-3" rows="10" placeholder="Digite sua mensagem aqui...">
-<span><span id="intro_despacho_causp">D </span><span id="n_despacho_causp">00</span></span><br><br>
+<div><span><span id="intro_despacho_causp">D </span><span id="n_despacho_causp">00</span></span></div>
+<br>
 
-RRT Nº XXXXXXXXXX 
-<br><br>
+<div>RRT Nº XXXXXXXXXX</div>
+<br>
 
-Olá! Seu RRT foi analisado e <b>aprovado</b>, por delegação de competência da Comissão de Exercício Profissional do CAU/SP. <br><br>
+<div>Olá,</div>
+<br>
 
-Seu RRT já se encontra <b>registrado</b> e pode ser impresso. <br><br>
+<div><strong>Seu RRT foi aprovado</strong> e já está registrado. Você pode imprimi-lo a qualquer momento.</div>
+<br>
 
-Informamos que é de responsabilidade do(a) Arquiteto(a) e Urbanista assegurar que as informações registradas no RRT são verídicas. <br> <br>
+<div>
+    A veracidade das informações no RRT é de responsabilidade do(a) arquiteto(a) e urbanista.
+</div>
+<br>
 
-Caso pretenda emitir CAT-A, será necessário atender ao disposto na Resolução Nº 93 – CAU/BR. <br><br><br>
-Caso tenha dúvidas sobre outros assuntos, acesse o <a href='https://causp.gov.br/atendimento/'>Canal de Atendimento</a> do CAU/SP.<br><br><br>
+<div>
+    Se tiver intenção de emitir uma <strong>CAT-A</strong>, consulte a 
+    <a href="https://transparencia.caubr.gov.br/resolucao93/" target="_blank">Resolução CAU/BR Nº 93/2014</a> e nosso 
+    <a href="https://causp.gov.br/wp-content/uploads/2025/02/CAT-A.pdf" target="_blank">Manual de CAT-A</a>.
+</div>
+<br>
 
 
-Atenciosamente, <br>
+<div>
+    Dúvidas? Acesse o <a href="https://causp.gov.br/atendimento/" target="_blank">Canal de Atendimento</a> do CAU/SP.<br>
+</div><br><br>
 
+<div>Atenciosamente,</div>
+<div>Coordenação Técnica do Exercício Profissional – CAU/SP</div>
 </textarea>
 
                             <div class="mt-3 mb-4  text-center">
@@ -369,6 +383,10 @@ Atenciosamente, <br>
                     'preview', 'print', 'fullsize', 
                     // 'about'
                 ]
+                ,
+                style: {
+                fontSize: '14px'
+                },
             });
 
         </script>
