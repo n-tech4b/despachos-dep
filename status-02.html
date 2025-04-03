@@ -173,7 +173,7 @@
                             <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="status-03" href="status-03.html">Baixa Aprovada</a>
                             <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="status-04" href="status-04.html">Indeferimento Aprovado</a>
                             <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="status-05" href="status-05.html">Baixa sem Data de Término</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="status-06" href="status-06.html">Cancelamento e Nulidade Sem Motivo/Declaração</a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="status-06" href="status-06.html">Pendência nos Status</a>
                             <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="status-07" href="status-07.html">Indeferimento Sem Motivo</a>
                             <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="status-08" href="status-08.html">Baixa de Ofício</a>
                             <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="status-09" href="status-09.html">Cancelamento Cargo e Função</a>
@@ -237,18 +237,73 @@
  
 
                             <textarea id="despacho" class="form-control mb-3" rows="10" placeholder="Digite sua mensagem aqui...">
-<span><span id="intro_despacho_causp">D </span><span id="n_despacho_causp">00</span></span><br><br>
+<div><span><span id="intro_despacho_causp">D </span><span id="n_despacho_causp">00</span></span></div> 
 
-Olá! Informamos que seu RRT foi <b>anulado</b>. <br><br>
+<br> 
 
-A nulidade de RRT o torna <b>inválido</b>, em consequência de estar gravado de vício, o que o impede de existir legalmente e de produzir efeitos. <br><br>
-Conforme Resolução 91 – CAU/BR: <br><br> <i>
-"Art. 43. Não haverá devolução de taxa de RRT anulado."</i> <br><br>
-Caso tenha dúvidas sobre outros assuntos, acesse o <a href='https://causp.gov.br/atendimento/'>Canal de Atendimento</a> do CAU/SP.<br><br><br>
+ 
 
+<div>RRT Nº XXXXXXXXXX</div> 
 
-Atenciosamente, <br>
-Coordenação Técnica do Exercício Profissional – CAU/SP
+<br> 
+
+ 
+
+<div>Olá,</div> 
+
+<br> 
+
+ 
+
+ 
+
+ 
+
+ 
+
+<div>Informamos que seu RRT foi <strong>anulado</strong>.</div>   
+
+<br>   
+
+ 
+
+<div>A nulidade de RRT o torna <strong>inválido</strong>, em consequência de estar gravado de vício, o que o impede de existir legalmente e de produzir efeitos.</div>   
+
+<br>   
+
+ 
+
+<div>Conforme Resolução 91 – CAU/BR:</div>   
+
+<br>   
+
+ 
+
+<div><i>"Art. 43. Não haverá devolução de taxa de RRT anulado."</i></div> 
+
+ 
+
+ 
+
+ 
+
+ 
+
+<br> 
+
+ 
+
+<div> 
+
+    Dúvidas? Acesse o <a href="https://causp.gov.br/atendimento/" target="_blank">Canal de Atendimento</a> do CAU/SP.<br> 
+
+</div><br><br> 
+
+ 
+
+<div>Atenciosamente,</div> 
+
+<div>Coordenação Técnica do Exercício Profissional – CAU/SP</div> 
 </textarea>
 
                             <div class="mt-3 mb-4  text-center">
@@ -340,6 +395,10 @@ Coordenação Técnica do Exercício Profissional – CAU/SP
                     'preview', 'print', 'fullsize', 
                     // 'about'
                 ]
+                ,
+                style: {
+                fontSize: '14px'
+                },
             });
 
         </script>
