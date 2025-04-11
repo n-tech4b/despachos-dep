@@ -241,18 +241,48 @@
  
 
                             <textarea id="despacho" class="form-control mb-3" rows="10" placeholder="Digite sua mensagem aqui...">
-<span><span id="intro_despacho_causp">I06 D </span><span id="n_despacho_causp">00</span></span><br><br>
+<div><span><span id="intro_despacho_causp">I01 D </span><span id="n_despacho_causp">00</span></span></div>
+<br>
 
-Olá! Seu registro<b> já está interrompido</b>, pois o prazo do registro provisório está vencido desde XXXXXXXXXXXX. Portanto, este protocolo não é necessário e será arquivado. <br><br>
-Caso esteja exercendo sua profissão e queira reativar o registro, deverá abrir um protocolo de reativação. <br><br>
+<div>Olá,</div>
+<br>
 
-Caso tenha dúvidas sobre outros assuntos, acesse o <a href='https://causp.gov.br/atendimento/'>Canal de Atendimento</a> do CAU/SP.<br><br><br>
+<div>Seu registro <strong>já está interrompido</strong> desde <strong>XXXXXXXXXXXX</strong>, pois o prazo do registro provisório expirou.</div>
+<br>
+
+<div>
+    Este protocolo será <strong>arquivado</strong> - não há necessidade de nova solicitação de interrupção. 
+</div>
+<br>
+
+<div>
+    📌 Se você estiver exercendo a profissão e deseja reativar o registro, é necessário: 
+</div>
+
+<div>
+    <ol>
+        <li>
+            <strong>Abrir um protocolo</strong> com o assunto:  <strong>"ENVIO DE DIPLOMA PARA REGISTRO DEFINITIVO"</strong>.
+        </li>
+        <li>
+            <strong>Anexar seu diploma de graduação</strong> no protocolo. 
+        </li>
+    </ol>
+</div>
+
+<div>
+    Assim, seu registro definitivo poderá ser efetivado. ✅ 
+</div>
+<br>
 
 
-Atenciosamente, <br>
-Coordenação Técnica do Exercício Profissional – CAU/SP
+<div>
+    Dúvidas? Acesse o <a href="https://causp.gov.br/atendimento/" target="_blank">Canal de Atendimento</a> do CAU/SP.<br>
+</div><br><br>
+
+<div>Atenciosamente,</div>
+<div>Coordenação Técnica do Exercício Profissional – CAU/SP</div>
 </textarea>
-
                             <div class="mt-3 mb-4  text-center">
                                 <button class="btn btn-primary d-inline m-1" style="width: 90px" id="updateButton">Atualizar</button>
                                 <button class="btn btn-success d-inline m-1 " style="width: 90px" id="copyButton">Copiar</button>
@@ -356,6 +386,10 @@ Coordenação Técnica do Exercício Profissional – CAU/SP
                     'preview', 'print', 'fullsize', 
                     // 'about'
                 ]
+                ,
+                style: {
+                fontSize: '14px'
+                },
             });
 
         </script>
