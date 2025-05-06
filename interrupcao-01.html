@@ -1,381 +1,464 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="icon" href="favicon.ico" type="image/x-icon">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <!-- Jodit CSS -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jodit/build/jodit.min.css">
-        
-        <title>Despachos PF</title>
-        
-        <style>
-            
-            html, body {
-                height: 100%; /* Garante que a altura total seja ocupada */
-                margin: 0; /* Remove margens externas */
-            }
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-            body {
-                display: flex;
-                flex-direction: column; /* Organiza o layout em coluna */
+    <!-- Jodit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jodit/build/jodit.min.css">
 
-                background-color: #f8f9fa;
-                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    <title>Despachos PF</title>
 
-                min-width: 500px;
-            }
+    <style>
+        html,
+        body {
+            height: 100%;
+            /* Garante que a altura total seja ocupada */
+            margin: 0;
+            /* Remove margens externas */
+        }
 
-            main {
-                flex: 1; /* Faz o conteúdo principal ocupar o espaço disponível */
-            }
-            
-            .siccau-color{
-                background-color: #006f78;
+        body {
+            display: flex;
+            flex-direction: column;
+            /* Organiza o layout em coluna */
 
-            }
+            background-color: #f8f9fa;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
-            .dropdown-item:hover {
-                background-color: #787800;
+            min-width: 500px;
+        }
 
-            }
+        main {
+            flex: 1;
+            /* Faz o conteúdo principal ocupar o espaço disponível */
+        }
 
+        .siccau-color {
+            background-color: #006f78;
 
-            .nav-link {
-                color: #ffffffe7  !important;     
+        }
 
-            }
+        .dropdown-item:hover {
+            background-color: #787800;
 
-            .nav-link:hover {
-                color: #ffffff83  !important;
-
-            }
-
-            .btn-custom {
-                background-color: #44546A;
-                color: #ffffffe7;
-                width: 135px;
-            }
-
-            
-            .btn-custom:hover {
-                background-color:#37475c;
-                color: #ffffff;
-            }
-
-            .atv_custom:hover {
-                background-color: #f0f0f0cd !important;
-            }
+        }
 
 
-            .atv_select {
-                background-color: #f0f0f0cd !important;
+        .nav-link {
+            color: #ffffffe7 !important;
 
-            }
+        }
 
-            .atv_custom {
-                font-size: 0.9em ;
+        .nav-link:hover {
+            color: #ffffff83 !important;
 
-            }
+        }
 
-        </style>
+        .btn-custom {
+            background-color: #44546A;
+            color: #ffffffe7;
+            width: 135px;
+        }
 
-    </head>
 
-    <body>
-            
-        <!--------------------------------------- nav superior ---------------------------------------->
+        .btn-custom:hover {
+            background-color: #37475c;
+            color: #ffffff;
+        }
 
-        <nav class="navbar navbar-expand-lg navbar-dark siccau-color">
+        .atv_custom:hover {
+            background-color: #f0f0f0cd !important;
+        }
 
-            <!-- brand -->
-            <a href="#" class="mr-3"><img src="logo.png" width="233" height="75" alt="Início" class="img-fluid"></a>
-            <a class="navbar-brand fa-lg pt-3 pb-3" href="">Despachos PF</a>
 
-            <!-- collapse button -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" >
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        
-            <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
-                <ul class="navbar-nav ">
+        .atv_select {
+            background-color: #f0f0f0cd !important;
 
-                    <!-- links demais páginas -->
-                    <ul class="navbar-nav flex-wrap">
-                        <li class="nav-item align-items-center justify-content-center">
-                            <a class="nav-link" href="https://acesso.caubr.gov.br/", target="_blank">SICCAU</a>
-                        </li>
-                        <li class="nav-item align-items-center justify-content-center">
-                            <a class="nav-link" href="https://conselhoarquitetura.sharepoint.com/:x:/r/sites/Tcnica-PF/_layouts/15/Doc.aspx?sourcedoc=%7BE9C33855-F6C5-4558-A324-D925A0E63F93%7D&file=Despachos.xlsx&action=default&mobileredirect=true" target="_blank">Despachos</a>
-                        </li>
-                        <li class="nav-item align-items-center justify-content-center">
-                            <a class="nav-link" href="https://conselhoarquitetura.sharepoint.com/:x:/r/sites/CAUSP-DRIVE/_layouts/15/Doc.aspx?sourcedoc=%7BA315911C-C43C-49D4-9B2C-47E613E30E1F%7D&file=EVENTOS%20RELEVANTES%20PJ.xlsx&action=default&mobileredirect=true", target="_blank">Histórico de Eventos</a>
-                        </li>
-                        <li class="nav-item align-items-center justify-content-center">
-                            <a class="nav-link" href="https://n-tech4b.github.io/despachos-pj/relatorio_1_tri_2023", target="_blank">Relatório</a>
-                        </li>
-                        <li class="nav-item align-items-center justify-content-center">
-                            <a class="nav-link" href="https://n-tech4b.github.io/despachos-pj/piso-semanal", target="_blank">Calculadora Piso</a>
-                        </li>
+        }
 
-                        <li class="nav-item align-items-center justify-content-center">
-                            <a class="nav-link" href="https://transparencia.caubr.gov.br/resolucoes/" target="_blank">Resoluções</a>
-                        </li>
-                        <li class="nav-item align-items-center justify-content-center">
-                            <a class="nav-link" href="https://conselhoarquitetura.sharepoint.com/:f:/r/sites/Tcnica-PF/Documentos%20Compartilhados/General/Manual%20-%20Supervis%C3%A3o%20de%20Pessoa%20F%C3%ADsica?csf=1&web=1&e=3BsCAt" target="_blank">Manuais</a>
-                        </li>
-                        <li class="nav-item align-items-center justify-content-center">
-                            <a class="nav-link" href="https://conselhoarquitetura.sharepoint.com/:f:/r/sites/Tcnica-PF/Documentos%20Compartilhados/General?csf=1&web=1&e=Tw83pb" target="_blank">Drive</a>
-                        </li>
-                        <li class="nav-item align-items-center justify-content-center">
-                            <a class="nav-link" href="https://servicos.caubr.gov.br/helpdesk/doku.php" target="_blank">Tutorias (Helpdesk)</a>                  
-                        </li>
-                    </ul>
+        .atv_custom {
+            font-size: 0.9em;
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!--------------------------------------- nav superior ---------------------------------------->
+
+    <nav class="navbar navbar-expand-lg navbar-dark siccau-color">
+
+        <!-- brand -->
+        <a href="#" class="mr-3"><img src="logo.png" width="233" height="75" alt="Início" class="img-fluid"></a>
+        <a class="navbar-brand fa-lg pt-3 pb-3" href="">Despachos PF</a>
+
+        <!-- collapse button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+            <ul class="navbar-nav ">
+
+                <!-- links demais páginas -->
+                <ul class="navbar-nav flex-wrap">
+                    <li class="nav-item align-items-center justify-content-center">
+                        <a class="nav-link" href="https://acesso.caubr.gov.br/" , target="_blank">SICCAU</a>
+                    </li>
+                    <li class="nav-item align-items-center justify-content-center">
+                        <a class="nav-link"
+                            href="https://conselhoarquitetura.sharepoint.com/:x:/r/sites/Tcnica-PF/_layouts/15/Doc.aspx?sourcedoc=%7BE9C33855-F6C5-4558-A324-D925A0E63F93%7D&file=Despachos.xlsx&action=default&mobileredirect=true"
+                            target="_blank">Despachos</a>
+                    </li>
+                    <li class="nav-item align-items-center justify-content-center">
+                        <a class="nav-link"
+                            href="https://conselhoarquitetura.sharepoint.com/:x:/r/sites/CAUSP-DRIVE/_layouts/15/Doc.aspx?sourcedoc=%7BA315911C-C43C-49D4-9B2C-47E613E30E1F%7D&file=EVENTOS%20RELEVANTES%20PJ.xlsx&action=default&mobileredirect=true"
+                            , target="_blank">Histórico de Eventos</a>
+                    </li>
+                    <li class="nav-item align-items-center justify-content-center">
+                        <a class="nav-link" href="https://n-tech4b.github.io/despachos-pj/relatorio_1_tri_2023" ,
+                            target="_blank">Relatório</a>
+                    </li>
+                    <li class="nav-item align-items-center justify-content-center">
+                        <a class="nav-link" href="https://n-tech4b.github.io/despachos-pj/piso-semanal" ,
+                            target="_blank">Calculadora Piso</a>
+                    </li>
+
+                    <li class="nav-item align-items-center justify-content-center">
+                        <a class="nav-link" href="https://transparencia.caubr.gov.br/resolucoes/"
+                            target="_blank">Resoluções</a>
+                    </li>
+                    <li class="nav-item align-items-center justify-content-center">
+                        <a class="nav-link"
+                            href="https://conselhoarquitetura.sharepoint.com/:f:/r/sites/Tcnica-PF/Documentos%20Compartilhados/General/Manual%20-%20Supervis%C3%A3o%20de%20Pessoa%20F%C3%ADsica?csf=1&web=1&e=3BsCAt"
+                            target="_blank">Manuais</a>
+                    </li>
+                    <li class="nav-item align-items-center justify-content-center">
+                        <a class="nav-link"
+                            href="https://conselhoarquitetura.sharepoint.com/:f:/r/sites/Tcnica-PF/Documentos%20Compartilhados/General?csf=1&web=1&e=Tw83pb"
+                            target="_blank">Drive</a>
+                    </li>
+                    <li class="nav-item align-items-center justify-content-center">
+                        <a class="nav-link" href="https://servicos.caubr.gov.br/helpdesk/doku.php"
+                            target="_blank">Tutorias (Helpdesk)</a>
+                    </li>
                 </ul>
-            </div>
-        </nav>
-  
-        <!--------------------------------------- area elaboração do despacho ---------------------------------------->
+            </ul>
+        </div>
+    </nav>
 
-        <main>
-            <div class="container-fluid my-4 text-center">
+    <!--------------------------------------- area elaboração do despacho ---------------------------------------->
 
-                <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"   onclick="RedirecionarRRTs()">RRTs</button>
-                <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"   onclick="RedirecionarCAT()">CAT-A</button>
-                <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"   onclick="RedirecionarRDA()">RDA</button>
-                <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"  onclick="RedirecionarStatusRRT()">STATUS RRT</button>
-                <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"style="background-color:#2b3a4d;" onclick="RedirecionarInterrupcao()">INTERRUPÇÃO</button>
-                <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"  onclick="RedirecionarProtocolos()">PROTOCOLOS</button>
-                <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"  onclick="RedirecionarEmail()">E-MAIL</button>
-                <!-- <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"  onclick="RedirecionarDespachosGerais()">+ DESPACHOS</button> -->
-                <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"  onclick="RedirecionarSICCAU()">SICCAU</button>
+    <main>
+        <div class="container-fluid my-4 text-center">
 
-            </div>
+            <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"
+                onclick="RedirecionarRRTs()">RRTs</button>
+            <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"
+                onclick="RedirecionarCAT()">CAT-A</button>
+            <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline" onclick="RedirecionarRDA()">RDA</button>
+            <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline" onclick="RedirecionarStatusRRT()">STATUS
+                RRT</button>
+            <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline" style="background-color:#2b3a4d;"
+                onclick="RedirecionarInterrupcao()">INTERRUPÇÃO</button>
+            <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"
+                onclick="RedirecionarProtocolos()">PROTOCOLOS</button>
+            <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"
+                onclick="RedirecionarEmail()">E-MAIL</button>
+            <!-- <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"  onclick="RedirecionarDespachosGerais()">+ DESPACHOS</button> -->
+            <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"
+                onclick="RedirecionarSICCAU()">SICCAU</button>
 
-            <hr>
+        </div>
 
-            <div class="container-fluid">
-                <div class="row">
-                    <!-- Left Sidebar -->
-                    <div class="col-md-2 px-2 mb-4">
-                        <div class="list-group mb-3">
+        <hr>
 
-                            <div class="row d-flex align-items-center mx-0">
-                                <h5 class="m-0 mt-2 mb-3 mr-2">Interrupção:</h5>
-                            </div>
-
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="interrupcao-01" href="interrupcao-01.html" style="background-color: #2b3a4d !important; color: #fff;">Interrupção Aprovada</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="interrupcao-02" href="interrupcao-02.html">RRTs Sem Solicitação de Baixa</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="interrupcao-03" href="interrupcao-03.html">Responsabilidade Técnica Ativa</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="interrupcao-04" href="interrupcao-04.html">Responsabilidade Técnica e RRT</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="interrupcao-05" href="interrupcao-05.html">Processo Fiscalizatório ou Ético-Disciplinar em Tramitação</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="interrupcao-06" href="interrupcao-06.html">Registro Provisório Vencido</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="interrupcao-07" href="interrupcao-07.html">Registro já está Interrompido</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="interrupcao-08" href="interrupcao-08.html">Protocolo de Cancelamento</a>
-                            
-    
-                        
-                        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Left Sidebar -->
+                <div class="col-md-2 px-2 mb-4">
+                    <div class="list-group mb-3">
 
                         <div class="row d-flex align-items-center mx-0">
-                            <h5 class="m-0 mt-2 mb-3 mr-2">Cancelamento:</h5>
+                            <h5 class="m-0 mt-2 mb-3 mr-2">Interrupção:</h5>
                         </div>
-                        <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="cancelamento-01" href="cancelamento-01.html">Cancelamento Aprovado (e-mail)</a>
+
+                        <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="interrupcao-01"
+                            href="interrupcao-01.html"
+                            style="background-color: #2b3a4d !important; color: #fff;">Interrupção Aprovada</a>
+                        <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="interrupcao-02"
+                            href="interrupcao-02.html">RRTs Sem Solicitação de Baixa</a>
+                        <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="interrupcao-03"
+                            href="interrupcao-03.html">Responsabilidade Técnica Ativa</a>
+                        <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="interrupcao-04"
+                            href="interrupcao-04.html">Responsabilidade Técnica e RRT</a>
+                        <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="interrupcao-05"
+                            href="interrupcao-05.html">Processo Fiscalizatório ou Ético-Disciplinar em Tramitação</a>
+                        <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="interrupcao-06"
+                            href="interrupcao-06.html">Registro Provisório Vencido</a>
+                        <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="interrupcao-07"
+                            href="interrupcao-07.html">Registro já está Interrompido</a>
+                        <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="interrupcao-08"
+                            href="interrupcao-08.html">Protocolo de Cancelamento</a>
+
 
 
                     </div>
 
-                    <!-- Main Section -->
-                    <div class="col-md-8 px-2">
-                        <div class="container-fluid px-0">
-                            
-            
-                            <div class="row d-flex mb-2 align-items-center mx-0 ">
-                                
-                                <h5 class="m-0 mr-2">Despacho:</h5>
-                            
-                                <div class="btn-group btn-group-toggle P-0" data-toggle=""> 
-                                    <!-- btn-group-toggle -->
+                    <div class="row d-flex align-items-center mx-0">
+                        <h5 class="m-0 mt-2 mb-3 mr-2">Cancelamento:</h5>
+                    </div>
+                    <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="cancelamento-01"
+                        href="cancelamento-01.html">Cancelamento Aprovado (e-mail)</a>
 
-                                    <label class="btn btn-info active">
-                                        <input type="radio" name="options" id="option0" autocomplete="off"> 00
-                                    </label>
 
-                                    <label class="btn btn-info">
-                                        <input type="radio" name="options" id="option1" autocomplete="off"> 01
-                                    </label>
-                                    <label class="btn btn-info">
-                                        <input type="radio" name="options" id="option2" autocomplete="off"> 02
-                                    </label>
-                                    <label class="btn btn-info">
-                                        <input type="radio" name="options" id="option3" autocomplete="off"> 03
-                                    </label>
-                                    <label class="btn btn-info">
-                                        <input type="radio" name="options" id="option4" autocomplete="off"> 04
-                                    </label>
-                                    <label class="btn btn-info">
-                                        <input type="radio" name="options" id="option5" autocomplete="off"> 05
-                                    </label>
-                                    <label class="btn btn-info">
-                                        <input type="radio" name="options" id="option6" autocomplete="off"> 06
-                                    </label>
-                                    <label class="btn btn-info">
-                                        <input type="radio" name="options" id="option7" autocomplete="off"> 07
-                                    </label>
-                                    <label class="btn btn-info">
-                                        <input type="radio" name="options" id="option8" autocomplete="off"> 08
-                                    </label>
-                                    <label class="btn btn-info">
-                                        <input type="radio" name="options" id="option9" autocomplete="off"> 09
-                                    </label>
-                                    <label class="btn btn-info">
-                                        <input type="radio" name="options" id="option10" autocomplete="off"> 10
-                                    </label>
+                </div>
 
-                                </div>
+                <!-- Main Section -->
+                <div class="col-md-8 px-2">
+                    <div class="container-fluid px-0">
+
+
+                        <div class="row d-flex mb-2 align-items-center mx-0 ">
+
+                            <h5 class="m-0 mr-2">Despacho:</h5>
+
+                            <div class="btn-group btn-group-toggle P-0" data-toggle="">
+                                <!-- btn-group-toggle -->
+
+                                <label class="btn btn-info active">
+                                    <input type="radio" name="options" id="option0" autocomplete="off"> 00
+                                </label>
+
+                                <label class="btn btn-info">
+                                    <input type="radio" name="options" id="option1" autocomplete="off"> 01
+                                </label>
+                                <label class="btn btn-info">
+                                    <input type="radio" name="options" id="option2" autocomplete="off"> 02
+                                </label>
+                                <label class="btn btn-info">
+                                    <input type="radio" name="options" id="option3" autocomplete="off"> 03
+                                </label>
+                                <label class="btn btn-info">
+                                    <input type="radio" name="options" id="option4" autocomplete="off"> 04
+                                </label>
+                                <label class="btn btn-info">
+                                    <input type="radio" name="options" id="option5" autocomplete="off"> 05
+                                </label>
+                                <label class="btn btn-info">
+                                    <input type="radio" name="options" id="option6" autocomplete="off"> 06
+                                </label>
+                                <label class="btn btn-info">
+                                    <input type="radio" name="options" id="option7" autocomplete="off"> 07
+                                </label>
+                                <label class="btn btn-info">
+                                    <input type="radio" name="options" id="option8" autocomplete="off"> 08
+                                </label>
+                                <label class="btn btn-info">
+                                    <input type="radio" name="options" id="option9" autocomplete="off"> 09
+                                </label>
+                                <label class="btn btn-info">
+                                    <input type="radio" name="options" id="option10" autocomplete="off"> 10
+                                </label>
+
                             </div>
- 
-
-                            <textarea id="despacho" class="form-control mb-3" rows="10" placeholder="Digite sua mensagem aqui...">
-<span><span id="intro_despacho_causp">I01 D </span><span id="n_despacho_causp">00</span></span><br><br>
-
-Olá! Sua solicitação de Interrupção de Registro Profissional foi <b>deferida</b>.  <br><br>
-
-Toda e qualquer atividade profissional vinculada ao exercício da profissão de arquiteto e urbanista deve ser <b>interrompida</b>, bem como qualquer tipo de divulgação de suas atividades profissionais, estando sujeito à fiscalização do CAU/SP. <br><br>
-
-Ressaltamos que, segundo a Resolução nº 167/2018 do CAU/BR:<br><br>
-
-<i>Art. 5º A existência de dívidas pendentes não obsta a interrupção do registro no CAU.<br>
-Parágrafo único. <b>A interrupção do registro não extingue as dívidas do arquiteto e urbanista com o CAU</b>, as quais serão cobradas pelo CAU/UF competente pelas vias administrativas e/ou judiciais, conforme normativos específicos do CAU/BR acerca de anuidades e cobrança de valores.</i><br><br>
-
-<b>É considerado <b>Exercício Ilegal da Profissão</b>, conforme Art. 39 da Resolução Nº 198/2020 - CAU/BR,  <b>exercer ou oferecer atividade de Arquitetura e Urbanismo, com registro interrompido ou suspenso</b> no CAU, caracterizando-se uma <b>infração</b> ao Exercício Profissional.</b>. <br><br>
-Todas as atividades em andamento relacionadas ao exercício da profissão de arquiteto e urbanista devem ser transferidas para outro profissional. <br><br>
-Se houver débitos pendentes, o boleto será gerado proporcionalmente em sua página. <br><br><br>
+                        </div>
 
 
-Informamos que, conforme Resolução Nº 167/2018 - CAU/BR: 
-<b>"o profissional terá direito a 1 (uma) solicitação de reativação do registro por ano civil, sem cobrança de taxa expediente. No caso de mais de uma solicitação de reativação no mesmo ano, será cobrada uma taxa de expediente no valor de 1 (um) duodécimo do valor da anuidade do ano corrente para cada solicitação de reativação adicional". </b><br><br><br>
+                        <textarea id="despacho" class="form-control mb-3" rows="10"
+                            placeholder="Digite sua mensagem aqui...">
+<div><span><span id="intro_despacho_causp">I01 D </span><span id="n_despacho_causp">00</span></span></div>
+<br>
 
+<div>Olá,</div>
+<br>
 
-Caso tenha dúvidas sobre outros assuntos, acesse o <a href='https://causp.gov.br/atendimento/'>Canal de Atendimento</a> do CAU/SP.<br><br><br>
+<div>
+    Sua solicitação de Interrupção de Registro Profissional foi deferida. ✅
+</div>
+<br>
 
+<div>
+    A partir de agora, deve-se <strong>interromper toda e qualquer</strong> atividade profissional vinculada ao exercício da Arquitetura e Urbanismo, incluindo a <strong>divulgação de serviços profissionais</strong>. 
+</div>
+<br>
 
-Atenciosamente, <br>
-Coordenação Técnica do Exercício Profissional – CAU/SP
+<div>
+    ⚠️ O descumprimento poderá resultar em <strong>fiscalização e sanções</strong> por parte do CAU/SP.
+</div>
+<br>
+
+<div>
+    📌 <strong>Informações importantes</strong>: 
+</div>
+
+<div>
+    <ol>
+        <li>
+            <strong>Sobre dívidas pendentes</strong> 
+            De acordo com a <strong>Resolução nº 167/2018 – CAU/BR</strong>, a existência de dívidas não impede a interrupção do registro. No entanto, a interrupção <strong>não extingue os débitos existentes</strong>, que continuarão sendo cobrados administrativamente ou judicialmente pelo CAU/UF.
+            <br>
+            <span style="color: red;">Caso existam <strong>valores pendentes</strong>, o sistema irá gerar o boleto <strong>proporcionalmente na sua página</strong> no SICCAU.</span>          
+        </li>
+
+        <li>
+            <strong>Exercício Ilegal da Profissão</strong> 
+            Conforme o <strong>Art. 39 da Resolução nº 198/2020 – CAU/BR</strong>, exercer ou oferecer serviços de Arquitetura e Urbanismo com o registro interrompido configura <strong>infração ética e exercício ilegal da profissão</strong>.  
+            <br>
+            <span style="color: red;"><strong>Todas as atividades técnicas em andamento devem ser transferidas para outro profissional</strong>. </span>
+        </li>
+
+        <li>
+            <strong>Reativação do registro</strong> 
+            Segundo a <strong>Resolução nº 167/2018 – CAU/BR</strong>, o profissional tem direito a <strong>uma reativação gratuita por ano</strong>.  A partir da <strong>segunda solicitação no mesmo ano</strong>, será cobrada <strong>taxa de expediente no valor de 1/12 da anuidade vigente</strong>.  
+        </li>
+    </ol>
+</div>
+
+<div>
+    Dúvidas? Acesse o <a href="https://causp.gov.br/atendimento/" target="_blank">Canal de Atendimento</a> do CAU/SP.<br>
+</div><br><br>
+
+<div>Atenciosamente,</div>
+<div>Coordenação Técnica do Exercício Profissional – CAU/SP</div>
 </textarea>
 
-                            <div class="mt-3 mb-4  text-center">
-                                <button class="btn btn-primary d-inline m-1" style="width: 90px" id="updateButton">Atualizar</button>
-                                <button class="btn btn-success d-inline m-1 " style="width: 90px" id="copyButton">Copiar</button>
-                            </div>
-                            
-                        </div>
-                    </div>
-
-                    <!-- Right Sidebar -->
-                    <div class="col-md-2 px-2 mb-4">
-
-                        <div class="list-group rounded mb-3">
-                            <div class="row d-flex align-items-center mx-0">
-                                <h5 class="m-0 mt-2 mb-3 mr-2">Reativação:</h5>
-                            </div>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="reativacao-01" href="reativacao-01.html">Reativação Aprovada</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="reativacao-02" href="reativacao-02.html">Registro Provisório</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="reativacao-03" href="reativacao-03.html">Débitos Financeiros</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="reativacao-04" href="reativacao-04.html">Mais de Uma Reativação no Ano - Pagamento da Taxa de Expediente</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="reativacao-05" href="reativacao-05.html">Pendência da Interrupção de Registro</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="reativacao-06" href="reativacao-06.html">Encaminhamento ao GFIN (Tramitação de Protocolo)</a>
-
-                                    
+                        <div class="mt-3 mb-4  text-center">
+                            <button class="btn btn-primary d-inline m-1" style="width: 90px"
+                                id="updateButton">Atualizar</button>
+                            <button class="btn btn-success d-inline m-1 " style="width: 90px"
+                                id="copyButton">Copiar</button>
                         </div>
 
-
-
                     </div>
-
-                    </div>
-                    
                 </div>
+
+                <!-- Right Sidebar -->
+                <div class="col-md-2 px-2 mb-4">
+
+                    <div class="list-group rounded mb-3">
+                        <div class="row d-flex align-items-center mx-0">
+                            <h5 class="m-0 mt-2 mb-3 mr-2">Reativação:</h5>
+                        </div>
+                        <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="reativacao-01"
+                            href="reativacao-01.html">Reativação Aprovada</a>
+                        <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="reativacao-02"
+                            href="reativacao-02.html">Registro Provisório</a>
+                        <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="reativacao-03"
+                            href="reativacao-03.html">Débitos Financeiros</a>
+                        <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="reativacao-04"
+                            href="reativacao-04.html">Mais de Uma Reativação no Ano - Pagamento da Taxa de
+                            Expediente</a>
+                        <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="reativacao-05"
+                            href="reativacao-05.html">Pendência da Interrupção de Registro</a>
+                        <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="reativacao-06"
+                            href="reativacao-06.html">Encaminhamento ao GFIN (Tramitação de Protocolo)</a>
+
+
+                    </div>
+
+
+
+                </div>
+
             </div>
 
-        </main>
+        </div>
+        </div>
 
-        <!--------------------------------------- footer  ---------------------------------------->
+    </main>
 
-        <footer class="siccau-color text-light d-flex align-items-center justify-content-center py-2 mt-3">
-            <p class="m-1">Equipe de Coordenação Técnica de Exercício Profissional - CAU/SP</p>
-        </footer>
-        
-    
-        <!-- JavaScript (Opcional) -->
-        <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-        
-        <!-- Inclua o script principal do Jodit -->
-        <script src="https://cdn.jsdelivr.net/npm/jodit/build/jodit.min.js"></script>
+    <!--------------------------------------- footer  ---------------------------------------->
 
-        <!-- Inicializando o editor -->
+    <footer class="siccau-color text-light d-flex align-items-center justify-content-center py-2 mt-3">
+        <p class="m-1">Equipe de Coordenação Técnica de Exercício Profissional - CAU/SP</p>
+    </footer>
 
-        <script>
 
-            // var despacho = new Jodit('#despacho', {
-            //     // Configurações do editor
-            //     minHeight: 300,
-            //     buttons: [
-            //         'undo', 'redo', '|', 
-            //         'bold', 'italic', 'underline', 'strikethrough', '|', 
-            //         'align', 'outdent', 'indent', '|',
-            //         'ul', 'ol', '|',
-            //         'font', 'fontsize', 'brush', '|',
-            //         'table', 'link', 'image', '|',
-            //         'print', 'source', 'hr', 'removeformat'
-            
-            //     ]
-            // });
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
 
-            var despacho = new Jodit('#despacho', {
-                "uploader": {
+    <!-- Inclua o script principal do Jodit -->
+    <script src="https://cdn.jsdelivr.net/npm/jodit/build/jodit.min.js"></script>
+
+    <!-- Inicializando o editor -->
+
+    <script>
+
+        // var despacho = new Jodit('#despacho', {
+        //     // Configurações do editor
+        //     minHeight: 300,
+        //     buttons: [
+        //         'undo', 'redo', '|', 
+        //         'bold', 'italic', 'underline', 'strikethrough', '|', 
+        //         'align', 'outdent', 'indent', '|',
+        //         'ul', 'ol', '|',
+        //         'font', 'fontsize', 'brush', '|',
+        //         'table', 'link', 'image', '|',
+        //         'print', 'source', 'hr', 'removeformat'
+
+        //     ]
+        // });
+
+        var despacho = new Jodit('#despacho', {
+            "uploader": {
                 "insertImageAsBase64URI": true
-                },
-                // Configurações do editor
-                language: 'pt_br', // Define o idioma como português
-                maxHeight: 650,
-                enter: "br",
-                spellcheck: true,
-                showXPathInStatusbar: false,
-                askBeforePasteHTML: true,
-                askBeforePasteFromWord: false,
-                buttons: [
-                    'undo', 'redo', '|',
-                    'font','fontsize', 'eraser', '|',
-                    'bold', 'italic', 'underline', 'strikethrough', 
-                    'superscript', 'subscript', 'brush', '|',
-                    'ul', 'ol', 
-                    //'indent', 'outdent', 'align', 'lineHeight', 
-                    'paragraph', '|',
-                    'table', 'hr', 'symbols', '|',
-                    // 'classSpan', '|',
-                    // 'file', 
-                    'link', 'image', 'video', '|',
-                    // 'cut', 'copy', 'paste', 
-                    // 'copyformat', '|',
-                    // 'ai-commands', 'ai-assistant', '|',
-                    'find', 'spellcheck', 
-                    //'selectall', 'copy', 
-                    'preview', 'print', 'fullsize', 
-                    // 'about'
-                ]
-            });
+            },
+            // Configurações do editor
+            language: 'pt_br', // Define o idioma como português
+            maxHeight: 650,
+            enter: "br",
+            spellcheck: true,
+            showXPathInStatusbar: false,
+            askBeforePasteHTML: true,
+            askBeforePasteFromWord: false,
+            buttons: [
+                'undo', 'redo', '|',
+                'font', 'fontsize', 'eraser', '|',
+                'bold', 'italic', 'underline', 'strikethrough',
+                'superscript', 'subscript', 'brush', '|',
+                'ul', 'ol',
+                //'indent', 'outdent', 'align', 'lineHeight', 
+                'paragraph', '|',
+                'table', 'hr', 'symbols', '|',
+                // 'classSpan', '|',
+                // 'file', 
+                'link', 'image', 'video', '|',
+                // 'cut', 'copy', 'paste', 
+                // 'copyformat', '|',
+                // 'ai-commands', 'ai-assistant', '|',
+                'find', 'spellcheck',
+                //'selectall', 'copy', 
+                'preview', 'print', 'fullsize',
+                // 'about'
+            ]
+            ,
+            style: {
+                fontSize: '14px'
+            },
+        });
 
-        </script>
+    </script>
 
-        <script>
+    <script>
 
         document.getElementById('copyButton').addEventListener('click', function () {
             // Obtém o conteúdo da área de texto
@@ -387,7 +470,7 @@ Coordenação Técnica do Exercício Profissional – CAU/SP
 
             // Seleciona todas as células de tabela (<td>) e adiciona o estilo de borda
             var cells = tempDiv.querySelectorAll('td');
-            cells.forEach(function(cell) {
+            cells.forEach(function (cell) {
                 cell.style.border = '1px solid'; // Adiciona uma borda preta de 1px
             });
 
@@ -397,7 +480,7 @@ Coordenação Técnica do Exercício Profissional – CAU/SP
                 .replace(/>\s+</g, '><');     // Remove espaços entre tags HTML
 
             // Remove os trechos de <span> indesejados
-                var cleanedContent = compactedContent
+            var cleanedContent = compactedContent
                 .replace(/<span><span id="intro_despacho_causp">/g, '') // Remove a abertura específica
                 .replace(/<\/span><span id="n_despacho_causp">/g, '') // Remove a combinação específica
                 .replace(/<\/span><\/span>/g, ''); // Remove a combinação de fechamento
@@ -424,7 +507,7 @@ Coordenação Técnica do Exercício Profissional – CAU/SP
         });
 
 
-        document.getElementById('updateButton').addEventListener('click', function() {
+        document.getElementById('updateButton').addEventListener('click', function () {
             location.reload(); // Esta linha recarrega a página
         });
 
@@ -456,7 +539,7 @@ Coordenação Técnica do Exercício Profissional – CAU/SP
             window.open('siccau-01.html', '_self');
         }
 
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function () {
             // Seleciona todos os inputs do tipo rádio
             const radioButtons = document.querySelectorAll('input[type="radio"][name="options"]');
             const labels = document.querySelectorAll('label.btn');
@@ -471,7 +554,7 @@ Coordenação Técnica do Exercício Profissional – CAU/SP
 
                 // Obtém o número da opção clicada e formata com dois dígitos
                 const selectedOption = event.target.id.replace('option', '').padStart(2, '0');
-                
+
                 // Altera o conteúdo do elemento com id "n_despacho_causp"
                 document.getElementById('n_despacho_causp').innerText = selectedOption;
 
@@ -484,7 +567,8 @@ Coordenação Técnica do Exercício Profissional – CAU/SP
             });
         });
 
-        </script>  
+    </script>
 
-    </body>
+</body>
+
 </html>

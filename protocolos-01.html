@@ -230,20 +230,51 @@
  
 
                             <textarea id="despacho" class="form-control mb-3" rows="10" placeholder="Digite sua mensagem aqui...">
-Olá! Informamos que sua solicitação de permissão de retificação de RRT baixado <b>foi aprovada</b>. Para efetuar a retificação, basta elaborar um RRT Retificador. <br>
-<br><br>
-Em caso de solicitação de CAT-A, é preciso que, após a retificação, efetue a baixa e, em seguida, solicite uma nova CAT-A, pois, quando um RRT é Retificado, o sistema automaticamente invalida a certidão. <br><br>
-Lembramos que não é permitido retificar a data de início, grupo de atividades, modalidade do RRT, UF do endereço e remoção da empresa contratada, em conformidade com a Resolução Nº 91 - CAU/BR. <br><br><br>
+<div>Olá!</div>
+<br>
+<div>Informamos que sua solicitação para retificação de RRT baixado <strong>foi aprovada</strong>. ✅ </div>
+<br>
+<div>Para seguir com a correção, basta elaborar um RRT Retificador <strong>diretamente no SICCAU</strong>. </div>
+<br>
+<div>📄 <strong>Precisa de ajuda para fazer a retificação</strong>? Clique aqui para acessar o tutorial. </div>
+<br>  
+<div>📌 <strong>Importante</strong>: De acordo com a Resolução nº 91 do CAU/BR, <strong>não é possível</strong> retificar os seguintes dados:  </div>
+<br>
+<div>
+    <ul>
+        <li>Data de início</li>
+        <li>Grupo de atividades</li>
+        <li>Modalidade do RRT</li>
+        <li>UF do endereço</li>
+        <li>Exclusão da empresa contratada</li>
+    </ul>   
+</div>
 
 
-Clique <a href="https://servicos.caubr.gov.br/helpdesk/lib/exe/fetch.php/tut_como_retificar_rrt_r05.pdf ">aqui</a> para acessar o tutorial para retificação do RRT. <br><br><br>
+<div>➡️ Para corrigir essas informações, será necessário <strong>emitir um novo RRT</strong>. </div>
+<br>  
+<div>🔁 <strong>Retificação para CAT-A</strong>  </div>
+<br>
+<div>Se você pretende solicitar uma CAT-A, fique atento(a):</div>
+<div>Após a retificação, é necessário:</div>
+<div>
+    <ol>
+        <li>Efetuar a baixa do RRT retificado (<strong>atente-se no preenchimento correto da data de término</strong>);</li>
+        <li>Solicitar uma <strong>nova CAT-A</strong>.</li>
+    </ol>
 
-Caso tenha dúvidas sobre outros assuntos, acesse o <a href='https://causp.gov.br/atendimento/'>Canal de Atendimento</a> do CAU/SP.<br><br><br>
+</div>
 
-
-Atenciosamente, <br>
-Coordenação Técnica do Exercício Profissional – CAU/SP
-</textarea>
+    
+<div>➡️ No caso de CAT-A já solicitada, ao retirar a baixa do RRT para a permissão de retificação, a CAT-A é <strong>automaticamente invalidada pelo sistema</strong>. Por isso, é necessário que solicite uma nova CAT-A. </div>
+    
+<br>
+<div>
+    Dúvidas? Acesse o <a href="https://causp.gov.br/atendimento/" target="_blank">Canal de Atendimento</a> do CAU/SP.<br>
+</div><br><br>
+<div>Atenciosamente,</div>
+<div>Coordenação Técnica do Exercício Profissional – CAU/SP</div>
+                            </textarea>
 
                             <div class="mt-3 mb-4  text-center">
                                 <button class="btn btn-primary d-inline m-1" style="width: 90px" id="updateButton">Atualizar</button>
@@ -347,7 +378,11 @@ Coordenação Técnica do Exercício Profissional – CAU/SP
                     //'selectall', 'copy', 
                     'preview', 'print', 'fullsize', 
                     // 'about'
-                ]
+                    ]
+                ,
+                style: {
+                fontSize: '14px'
+                },
             });
 
         </script>
