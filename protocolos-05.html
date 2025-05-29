@@ -169,8 +169,8 @@
                             </div>
 
                             <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="protocolos-01" href="protocolos-01.html">Permissão Aprovada</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="protocolos-02" href="protocolos-02.html">Retificar Dados não Retificáveis</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="protocolos-03" href="protocolos-03.html">Permissão de Retificação Sem Dados</a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="protocolos-02" href="protocolos-02.html">Dados não Retificáveis</a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="protocolos-03" href="protocolos-03.html">Solicitação Sem Dados</a>
                             <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="protocolos-04" href="protocolos-04.html">Remoção de Baixa</a>
                             <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="protocolos-05" href="protocolos-05.html" style="background-color: #2b3a4d !important; color: #fff;">RRT Não Baixado</a>
                             
@@ -230,16 +230,51 @@
  
 
                             <textarea id="despacho" class="form-control mb-3" rows="10" placeholder="Digite sua mensagem aqui...">
-Olá! Informamos que sua solicitação de permissão de retificação de RRT baixado não poderá ser aprovada. <br><br>
-A permissão de retificação é concedida apenas para RRTs com solicitação de status (baixa, cancelamento ou nulidade). <br>
-Como seu RRT <b>não possui solicitação de status</b>, não é necessária a permissão de retificação, basta elaborar o RRT Retificador. <br>
-Se o seu RRT for Extemporâneo, Derivado ou de Atividade no Exterior e ainda estiver em análise, basta atender ao despacho clicando em “alterar RRT”. Se este botão não estiver disponível, basta solicitar por e-mail (analisepf@causp.gov.br) um novo despacho ao setor, para que libere a alteração, informando o número do RRT. <br><br>
+<div>Olá!</div>
+<br>
 
-Caso tenha dúvidas sobre outros assuntos, acesse o <a href='https://causp.gov.br/atendimento/'>Canal de Atendimento</a> do CAU/SP.<br><br><br>
+<div>Informamos que sua solicitação de permissão de retificação de RRT baixado <strong>não poderá ser aprovada</strong>. </div>
+<br>
+<div>📌 A permissão de retificação é concedida <strong>somente para RRTs com solicitação de status</strong> (baixa, cancelamento ou nulidade). </div>
+<br>
+<div>Como o seu RRT <strong>não possui status solicitado, não é necessária a permissão</strong> — basta <strong>elaborar diretamente um RRT Retificador</strong>.</div> 
+<br>
+<div>📄 <strong>Precisa de ajuda para fazer a retificação</strong>? <a href="https://servicos.caubr.gov.br/helpdesk/lib/exe/fetch.php/tut_como_retificar_rrt_r05.pdf" target="_blank">Clique aqui</a> para acessar o tutorial. </div>
+<br>
+<div><strong>Importante</strong>: De acordo com a Resolução nº 91 do CAU/BR, <strong>não é possível</strong> retificar os seguintes dados:  </div>
 
+<div>
+    <ul>
+        <li><strong>Data de início  </strong></li>
+        <li><strong>Grupo de atividades</strong></li>
+        <li><strong>Modalidade do RRT</strong></li>
+        <li><strong>UF do endereço</strong></li>
+        <li><strong>Exclusão da empresa contratada</strong></li>
+    </ul>   
+</div>
 
-Atenciosamente, <br>
-Coordenação Técnica do Exercício Profissional – CAU/SP
+<div>➡️ <span style="color: red;">Para corrigir essas informações, será necessário <strong>emitir um novo RRT</strong>.</span></div>
+<br>
+<div>⚠️ <strong>Se seu RRT for</strong>: </div>
+
+<div>
+    <ul>
+        <li><strong>Extemporâneo  </strong></li>
+        <li><strong>Derivado</strong></li>
+        <li><strong>De Atividade no Exterior</strong></li>
+    </ul>
+</div>
+
+<div>... e ainda estiver em análise, você pode atendê-lo clicando em “alterar RRT” no sistema. </div>
+
+<div>Se essa opção não estiver disponível, entre em contato com a nossa equipe de atendimento. </div>
+
+<br>
+<div>
+    Dúvidas? Acesse o <a href="https://causp.gov.br/atendimento/" target="_blank">Canal de Atendimento</a> do CAU/SP.<br>
+</div><br><br>
+<div>Atenciosamente,</div>
+<div>Coordenação Técnica do Exercício Profissional – CAU/SP</div>
 </textarea>
 
                             <div class="mt-3 mb-4  text-center">
@@ -344,7 +379,11 @@ Coordenação Técnica do Exercício Profissional – CAU/SP
                     //'selectall', 'copy', 
                     'preview', 'print', 'fullsize', 
                     // 'about'
-                ]
+                    ]
+                ,
+                style: {
+                fontSize: '14px'
+                },
             });
 
         </script>

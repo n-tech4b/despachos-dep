@@ -169,8 +169,8 @@
                             </div>
 
                             <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="protocolos-01" href="protocolos-01.html">Permissão Aprovada</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="protocolos-02" href="protocolos-02.html">Retificar Dados não Retificáveis</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="protocolos-03" href="protocolos-03.html">Permissão de Retificação Sem Dados</a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="protocolos-02" href="protocolos-02.html">Dados não Retificáveis</a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="protocolos-03" href="protocolos-03.html">Solicitação Sem Dados</a>
                             <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="protocolos-04" href="protocolos-04.html" style="background-color: #2b3a4d !important; color: #fff;">Remoção de Baixa</a>
                             <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="protocolos-05" href="protocolos-05.html">RRT Não Baixado</a>
                             
@@ -230,15 +230,52 @@
  
 
                             <textarea id="despacho" class="form-control mb-3" rows="10" placeholder="Digite sua mensagem aqui...">
-Olá! Informamos que a baixa do seu RRT foi retirada e permanecerá como “pendente”. <br><br>
-Quando encerrar a atividade, deverá nos solicitar a baixa, através do nosso canal de atendimento, informando o número do RRT e a data de término da atividade. <br><br>
-Se pretende retificar algum dado do RRT, é preciso que abra um protocolo com o assunto “Permissão de Retificação de RRT Baixado”, informando na descrição do protocolo o número do RRT, o motivo da retificação e os dados a serem retificados. <br><br>
+<div>Olá!</div>
+<br>
 
-Caso tenha dúvidas sobre outros assuntos, acesse o <a href='https://causp.gov.br/atendimento/'>Canal de Atendimento</a> do CAU/SP.<br><br><br>
+<div>Informamos que a <strong>baixa do seu RRT foi retirada</strong> e o registro permanecerá com o status <strong>“pendente”</strong>. </div>
+<br>
+<div>📌 <strong>Quando a atividade for encerrada</strong>, solicite a baixa por meio do nosso <a href="https://causp.gov.br/atendimento" target="_blank">Canal de Atendimento</a>, informando: </div>
 
+<div>
+    <ul>
+        <li><strong>Número do RRT</strong></li>
+        <li><strong>Data de término da atividade</strong></li>
+    </ul>   
+</div>
 
-Atenciosamente, <br>
-Coordenação Técnica do Exercício Profissional – CAU/SP
+<div>📄 <strong>Deseja retificar algum dado do RRT?</strong> </div>
+<div>Será necessário que abra um novo protocolo com o assunto <strong>“Permissão de Retificação de RRT Baixado”</strong>. Informe na descrição do protocolo:</div>
+ 
+
+<div>
+    <ul>
+        <li><strong>Número do RRT</strong></li>
+        <li><strong>Motivo da retificação</strong></li>
+        <li><strong>Dados a serem alterados</strong></li>
+    </ul>   
+</div>
+
+<div><strong>Importante</strong>: De acordo com a <a href="https://transparencia.caubr.gov.br/resolucao91/" target="_blank">Resolução nº 91</a> do CAU/BR, não é possível retificar os seguintes dados:  </div>
+
+<div>
+    <ul>
+        <li><strong>Data de início</strong></li>
+        <li><strong>Grupo de atividades</strong></li>
+        <li><strong>Modalidade do RRT</strong></li>
+        <li><strong>UF do endereço</strong></li>
+        <li><strong>Exclusão da empresa contratada</strong></li>
+    </ul>   
+</div>
+
+<div>➡️ <span style="color: red;">Para corrigir essas informações, será necessário <strong>emitir um novo RRT</strong>.</span></div>
+
+<br>
+<div>
+    Dúvidas? Acesse o <a href="https://causp.gov.br/atendimento/" target="_blank">Canal de Atendimento</a> do CAU/SP.<br>
+</div><br><br>
+<div>Atenciosamente,</div>
+<div>Coordenação Técnica do Exercício Profissional – CAU/SP</div>
 </textarea>
 
                             <div class="mt-3 mb-4  text-center">
@@ -343,7 +380,11 @@ Coordenação Técnica do Exercício Profissional – CAU/SP
                     //'selectall', 'copy', 
                     'preview', 'print', 'fullsize', 
                     // 'about'
-                ]
+                    ]
+                ,
+                style: {
+                fontSize: '14px'
+                },
             });
 
         </script>
