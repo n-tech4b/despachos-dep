@@ -492,7 +492,12 @@ Coordenação Técnica do Exercício Profissional – CAU/SP
             const textarea = document.getElementById('anotacaoTexto');
             textarea.select();
             document.execCommand('copy');
-                       
+            
+            // Feedback visual
+            const originalText = this.innerHTML;
+            this.innerHTML = '<i class="fas fa-check"></i>';
+
+            
             setTimeout(() => {
             this.innerHTML = originalText;
             this.classList.remove('btn-primary');
