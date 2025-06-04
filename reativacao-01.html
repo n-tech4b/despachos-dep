@@ -6,6 +6,7 @@
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
         <link rel="icon" href="favicon.ico" type="image/x-icon">
 
         <!-- Jodit CSS -->
@@ -261,8 +262,15 @@ Coordenação Técnica do Exercício Profissional – CAU/SP
                                 <button class="btn btn-success d-inline m-1 " style="width: 90px" id="copyButton">Copiar</button>
                             </div>
 
-                            <h5 class="m-0 mr-2">Anotação para o histórico do registro ativo:</h5>
-                            <textarea id="" class="form-control mb-3" rows="2" placeholder="">Deliberação CEP-CAU/SP 09/2024 determinou que a data de início deverá ser a data da aprovação, não mais do protocolo.</textarea>
+                            <div class="d-flex align-items-start">
+                            <h6 class="m-0 mr-2 mb-2">Anotação para o histórico do registro ativo:</h6>
+                            </div>
+                            <div class="d-flex align-items-center position-relative">
+                            <textarea id="anotacaoTexto" class="form-control mr-2" rows="1" placeholder="">Deliberação CEP-CAU/SP 09/2024 determinou que a data de início deverá ser a data da aprovação, não mais do protocolo.</textarea>
+                            <button id="copiarTexto" class="btn btn-success" style="height: 38px;">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                            </div>
                             
                         </div>
                     </div>
@@ -476,6 +484,29 @@ Coordenação Técnica do Exercício Profissional – CAU/SP
                 button.addEventListener('change', handleRadioChange);
             });
         });
+
+
+
+
+        document.getElementById('copiarTexto').addEventListener('click', function() {
+            const textarea = document.getElementById('anotacaoTexto');
+            textarea.select();
+            document.execCommand('copy');
+            
+            // Feedback visual
+            const originalText = this.innerHTML;
+            this.innerHTML = '<i class="fas fa-check"></i>';
+            this.classList.remove('btn-success');
+            this.classList.add('btn-primary');
+            
+            setTimeout(() => {
+            this.innerHTML = originalText;
+            this.classList.remove('btn-primary');
+            this.classList.add('btn-success');
+            }, 2000);
+        });
+
+
 
         </script>  
 
