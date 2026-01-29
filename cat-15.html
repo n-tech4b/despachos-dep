@@ -144,9 +144,9 @@
         <main>
             <div class="container-fluid my-4 text-center">
 
-                <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"   onclick="RedirecionarRRTs()">RRTs</button>
-                <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"   onclick="RedirecionarCAT()">CAT-A</button>
-                <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline" style="background-color:#2b3a4d;"  onclick="RedirecionarRDA()">RDA</button>
+                <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"  onclick="RedirecionarRRTs()">RRTs</button>
+                <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline" style="background-color:#2b3a4d;"  onclick="RedirecionarCAT()">CAT-A</button>
+                <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"   onclick="RedirecionarRDA()">RDA</button>
                 <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"  onclick="RedirecionarStatusRRT()">STATUS RRT</button>
                 <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"  onclick="RedirecionarInterrupcao()">REGISTRO</button>
                 <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"  onclick="RedirecionarProtocolos()">PROTOCOLOS</button>
@@ -165,18 +165,27 @@
                         <div class="list-group">
 
                             <div class="row d-flex align-items-center mx-0">
-                                <h5 class="m-0 mt-2 mb-3 mr-2">RDA:</h5>
+                                <h5 class="m-0 mt-2 mb-3 mr-2">CAT-A:</h5>
                             </div>
 
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="rda-01" href="rda-01.html">RDA Aprovado</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="rda-02" href="rda-02.html">RDA Encaminhado para a CEP</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="rda-03" href="rda-03.html">Faltam Todos os Documentos</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="rda-04" href="rda-04.html">Encaminhamento para a CEP (AMANDA)</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="rda-05" href="rda-05.html" style="background-color: #2b3a4d !important; color: #fff;">Sem RT</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="rda-06" href="rda-06.html">Falta Certificado Digital</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="rda-07" href="rda-07.html">Fora de Formatação</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="rda-08" href="rda-08.html">Faltam Documentos Técnicos</a>
-                        
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="cat-01" href="cat-01.html">CAT-A Aprovada</a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="cat-02" href="cat-02.html">Sem Atestado</a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="cat-03" href="cat-03.html">Dados Divergentes</a>
+                            <!-- <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="cat-04" href="cat-04.html">1 Dado Divergente</a> -->
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="cat-05" href="cat-05.html">Sem Identificação da PF ou PJ</a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="cat-06" href="cat-06.html">Atestado Não Contém Todas as Informações Necessárias</a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="cat-07" href="cat-07.html">Sem Valor de Contrato ou Doação</a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="cat-08" href="cat-08.html">Subcontratação</a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="cat-09" href="cat-09.html">Atestado em Resolução Incorreta</a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="cat-10" href="cat-10.html">Mais de um Endereço</a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="cat-11" href="cat-11.html">Endereço Incorreto</a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="cat-12" href="cat-12.html">Endereço de Outra UF</a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="cat-13" href="cat-13.html">Data de Término Incorreta</a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="cat-14" href="cat-14.html">Assinatura Digital Inválida</a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="cat-15" href="cat-15.html" style="background-color: #2b3a4d !important; color: #fff;">Data de Início Incorreta - Necessário Extemporâneo <span class="badge badge-primary">Novo</span></a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="cat-16" href="cat-16.html">Aprovação de CAT-A com RRT de Cargo e Função Aprovada <span class="badge badge-primary">Novo</span></a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="cat-17" href="cat-17.html">Nota de CAT-A de Cargo e Função Aprovada <span class="badge badge-primary">Novo</span></a>
+
                         </div>
                     </div>
 
@@ -232,18 +241,33 @@
  
 
                             <textarea id="despacho" class="form-control mb-3" rows="10" placeholder="Digite sua mensagem aqui...">
-<span><span id="intro_despacho_causp">D </span><span id="n_despacho_causp">00</span></span><br><br>
+<div><span><span id="intro_despacho_causp">D </span><span id="n_despacho_causp">00</span></span></div>
+<br>
+<div>Olá,</div>
+<br> 
+<div>Sua <strong>CAT-A foi analisada</strong> e identificamos que a <strong>data de início</strong> preenchida no RRT está <strong>divergente de atestado</strong>.</div>
+<br>
+ 
 
-RDA Nº XXXXXXXXXX <br><br>
-Olá! Conforme a Lei N° 12.378/2010, que regulamenta a profissão da Arquitetura e Urbanismo: <br>
-<i>Art. 45.  "Toda realização de trabalho de competência privativa ou de atuação compartilhadas com outras profissões regulamentadas será objeto de <b>Registro de Responsabilidade Técnica – RRT</b>." </i> <br><br>
-Portanto, solicitamos que anexe o RRT desta atividade. Caso o RRT não tenha sido elaborado, deverá ser emitido como RRT Extemporâneo. <br><br><br>
-O RRT pode ser anexado nesta solicitação ou encaminhado através do e-mail: <b>analisepf@causp.gov.br</b> informando o número deste RDA.
-<br>  <br><br><br>
-Caso tenha dúvidas sobre outros assuntos, acesse o <a href='https://causp.gov.br/atendimento/'>Canal de Atendimento</a> do CAU/SP.<br><br><br>
+<div>✅ <strong>Ação necessária</strong>: </div>
+<div>Como a atividade foi iniciada sem um responsável técnico, será necessária a emissão de um RRT Extemporâneo, conforme estabelece a <a href="https://transparencia.caubr.gov.br/resolucao91/" target="_blank">Resolução nº 91/2014 - CAU/BR</a>. Sujeito à fiscalização. </div>
+<br>
+<div>O <a href="https://causp.gov.br/wp-content/uploads/2025/02/Extemporaneo.pdf" target="_blank">RRT Extemporâneo</a> passará por análise pela equipe técnica do CAU/SP, devendo ser apresentado o atestado para embasar a avaliação. </div>
+<br>
+<div>Após a aprovação e registro do RRT, será necessário proceder à baixa do RRT (com atenção ao correto preenchimento da data de término) e, em seguida, solicitar a emissão de nova CAT-A </div>
+<br>
 
-Atenciosamente, <br>
-Coordenação Técnica do Exercício Profissional – CAU/SP
+
+<div>Caso tenha dúvidas sobre a CAT-A, acesse <a href="https://causp.gov.br/wp-content/uploads/2025/02/CAT-A.pdf" target="_blank">este link</a>. </div>
+<br>
+
+
+<div>Outras dúvidas? Acesse o <a href="https://causp.gov.br/atendimento/" target="_blank">Canal de Atendimento</a> do CAU/SP. </div>
+
+ 
+<br><br>
+<div>Atenciosamente,</div>
+<div>Coordenação Técnica do Exercício Profissional – CAU/SP</div>
 </textarea>
 
                             <div class="mt-3 mb-4  text-center">
@@ -257,7 +281,14 @@ Coordenação Técnica do Exercício Profissional – CAU/SP
                     <!-- Right Sidebar -->
                     <div class="col-md-2 px-2 mb-4">
 
- 
+                        <div class="list-group rounded mb-3">
+                            <div class="row d-flex align-items-center mx-0">
+                                <h5 class="m-0 mt-2 mb-3 mr-2">Atividade Técnica:</h5>
+                            </div>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="ativ-tecnica-01" href="ativ-tecnica-01.html">SPDA</a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="ativ-tecnica-02" href="ativ-tecnica-02.html">Manutenção (Pequeno Reparos)</a>
+          
+                        </div>
 
                     </div>
 
@@ -335,6 +366,10 @@ Coordenação Técnica do Exercício Profissional – CAU/SP
                     'preview', 'print', 'fullsize', 
                     // 'about'
                 ]
+                ,
+                style: {
+                fontSize: '14px'
+                },
             });
 
         </script>
