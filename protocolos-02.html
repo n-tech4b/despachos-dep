@@ -82,6 +82,10 @@
 
             }
 
+            #protocolos-02 {
+                background-color: #2b3a4d !important; color: #fff;
+            }
+
         </style>
 
     </head>
@@ -169,7 +173,7 @@
                             </div>
 
                             <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="protocolos-01" href="protocolos-01.html">Permissão Aprovada</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="protocolos-02" href="protocolos-02.html" style="background-color: #2b3a4d !important; color: #fff;">Dados não Retificáveis</a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="protocolos-02" href="protocolos-02.html" >Dados não Retificáveis</a>
                             <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="protocolos-03" href="protocolos-03.html">Solicitação Sem Dados</a>
                             <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="protocolos-04" href="protocolos-04.html">Remoção de Baixa</a>
                             <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="protocolos-05" href="protocolos-05.html">RRT Não Baixado</a>
@@ -232,9 +236,9 @@
                             <textarea id="despacho" class="form-control mb-3" rows="10" placeholder="Digite sua mensagem aqui...">
 <div>Olá!</div>
 <br>
-<div>Após análise, informamos que sua solicitação de retificação de RRT baixado <strong>não pôde ser aprovada</strong>.</div>
+<div>❌ Sua solicitação de retificação de RRT baixado <strong>não pôde ser aprovada</strong>.</div>
 <br>
-<div>📌 Isso porque, de acordo com a <a href="https://transparencia.caubr.gov.br/resolucao91/" target="_blank">Resolução nº 91</a> do CAU/BR, <strong>não é possível</strong> retificar os seguintes dados:</div>
+<div>📌 De acordo com a <a href="https://transparencia.caubr.gov.br/resolucao91/" target="_blank">Resolução nº 91</a> do CAU/BR, <strong>não é possível</strong> retificar os seguintes dados: </div>
 <div>
     <ul>
         <li><strong>Data de início</strong></li>
@@ -244,10 +248,10 @@
         <li><strong>Exclusão da empresa contratada</strong></li>
     </ul>   
 </div>
-<div>➡️ <span style="color: red;">Para corrigir essas informações, será necessário <strong>emitir um novo RRT</strong>.</span></div>
+<div>➡️ Para corrigir essas informações, será necessário <strong>emitir um novo RRT</strong>.</span></div>
 <br>
 <div>
-    Dúvidas? Acesse o <a href="https://causp.gov.br/atendimento/" target="_blank">Canal de Atendimento</a> do CAU/SP.<br>
+    Em caso de dúvidas, acesse o <a href="https://causp.gov.br/atendimento/" target="_blank">Canal de Atendimento</a> do CAU/SP.<br>
 </div><br><br>
 <div>Atenciosamente,</div>
 <div>Coordenação Técnica do Exercício Profissional – CAU/SP</div>
@@ -268,8 +272,8 @@
                             <div class="row d-flex align-items-center mx-0">
                                 <h5 class="m-0 mt-2 mb-3 mr-2">Envio de Certidões por Protocolo:</h5>
                             </div>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="protocolos-06" href="protocolos-06.html">Certidão de ISS - Envio Virtual</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="protocolos-07" href="protocolos-07.html">Certidão de ISS - Retirada Presencial</a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="protocolos-06" href="protocolos-06.html">Certidão - Envio Virtual</a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="protocolos-07" href="protocolos-07.html">Certidão - Solicitação de Informação ao CREA</a>
 
                                    
                         </div>
@@ -277,8 +281,13 @@
                         <div class="row d-flex align-items-center mx-0">
                             <h5 class="m-0 mt-2 mb-3 mr-2">Informação via Protocolo:</h5>
                         </div>
-                        <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="protocolos-08" href="protocolos-08.html">Extemporâneo - Dúvidas Sobre Multa</a>
-                        <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="protocolos-09" href="protocolos-09.html">Outro CAU/UF</a>
+                        <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="protocolos-08" href="protocolos-08.html">RRT Extemporâneo - Multa</a>
+                        <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="protocolos-09" href="protocolos-09.html">Profissional não Consegue Encontrar RRTs <span class="badge badge-primary">Novo</span></a>
+                        <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="protocolos-10" href="protocolos-10.html">Problema de Boleto de Múltiplo Mensal (<strong>ENCAMINHAMENTO AO INAD</strong>) <span class="badge badge-primary">Novo</span></a>
+                        <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="protocolos-11" href="protocolos-11.html">Vinculação de RRT por Equipe <span class="badge badge-primary">Novo</span></a>
+                        <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="protocolos-12" href="protocolos-12.html">Alteração de Status <span class="badge badge-primary">Novo</span></a>
+                        <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="protocolos-13" href="protocolos-13.html">Arquivamento de Protocolo <span class="badge badge-primary">Novo</span></a>
+                        <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="protocolos-14" href="protocolos-14.html">Arquivamento Definitivo de Protocolo <span class="badge badge-primary">Novo</span></a>
 
                     </div>
 
