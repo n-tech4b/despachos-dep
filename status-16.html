@@ -91,7 +91,9 @@
                 font-size: 0.9em ;
 
             }
-
+            #status-16 {
+                background-color: #2b3a4d !important; color: #fff;
+            }
         </style>
 
     </head>
@@ -156,9 +158,9 @@
 
                 <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"   onclick="RedirecionarRRTs()">RRTs</button>
                 <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"   onclick="RedirecionarCAT()">CAT-A</button>
-                <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"   onclick="RedirecionarRDA()">RDA</button>
-                <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"  onclick="RedirecionarStatusRRT()">STATUS RRT</button>
-                <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"style="background-color:#2b3a4d;" onclick="RedirecionarInterrupcao()">REGISTRO</button>
+                <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"  onclick="RedirecionarRDA()">RDA</button>
+                <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline" style="background-color:#2b3a4d;" onclick="RedirecionarStatusRRT()">STATUS RRT</button>
+                <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"  onclick="RedirecionarInterrupcao()">REGISTRO</button>
                 <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"  onclick="RedirecionarProtocolos()">PROTOCOLOS</button>
                 <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"  onclick="RedirecionarEmail()">E-MAIL</button>
                 <!-- <button class="btn btn-secondary btn-custom m-1 px-3 py-1 d-inline"  onclick="RedirecionarDespachosGerais()">+ DESPACHOS</button> -->
@@ -166,44 +168,43 @@
 
             </div>
 
-                    <hr>
-
-
+            <hr>
 
             <div class="container-fluid">
                 <div class="row">
                     <!-- Left Sidebar -->
                     <div class="col-md-2 px-2 mb-4">
-                        <div class="list-group mb-3">
+                        <div class="list-group">
 
                             <div class="row d-flex align-items-center mx-0">
-                                <h5 class="m-0 mt-2 mb-3 mr-2">Interrupção:</h5>
+                                <h5 class="m-0 mt-2 mb-3 mr-2">Alteração de Status:</h5>
                             </div>
 
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="interrupcao-01" href="interrupcao-01.html">Interrupção Aprovada</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="interrupcao-02" href="interrupcao-02.html">RRTs Sem Solicitação de Baixa</a>
-                        <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="interrupcao-03" href="interrupcao-03.html">Responsabilidade Técnica Ativa <span class="badge badge-success">Atualizado</span></a>
-                        <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="interrupcao-04" href="interrupcao-04.html">Responsabilidade Técnica e RRT <span class="badge badge-success">Atualizado</span></a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="interrupcao-05" href="interrupcao-05.html">Processo Fiscalizatório ou Ético-Disciplinar em Tramitação</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="interrupcao-06" href="interrupcao-06.html">Registro Provisório Vencido</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="interrupcao-07" href="interrupcao-07.html" style="background-color: #2b3a4d !important; color: #fff;">Registro já está Interrompido</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="interrupcao-08" href="interrupcao-08.html">Protocolo de Cancelamento</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="interrupcao-09" href="interrupcao-09.html" >Cancelamento de Registro Aprovado</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="interrupcao-10" href="interrupcao-10.html" >Envio de protocolo ao INAD - Erro no cálculo de anuidade (<strong>Tramitação Interna</strong>)</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="interrupcao-11" href="interrupcao-11.html">Solicitação de Interrupção (Mas o profissional está atuando)</a>
+                            
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="status-01" href="status-01.html">Cancelamento Aprovado</a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="status-02" href="status-02.html">Nulidade Aprovada</a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="status-03" href="status-03.html">Baixa Aprovada</a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="status-04" href="status-04.html">Indeferimento Aprovado</a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="status-05" href="status-05.html">Baixa sem Data de Término</a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="status-06" href="status-06.html">Pendência nos Status </a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="status-07" href="status-07.html">Indeferimento Sem Motivo</a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="status-08" href="status-08.html">Baixa de Ofício (RRT)</a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="status-09" href="status-09.html">Baixa de Ofício (ART)</a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="status-10" href="status-10.html">RRT Baixado (Prazo Esgotado)</a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="status-11" href="status-11.html">Certidão Emitida da ART (Prazo Esgotado)</a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="status-12" href="status-12.html">Cancelamento/Nulidade de RRT de Cargo e Função <span class="badge badge-success">Atualizado</span></a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="status-13" href="status-13.html">Cancelamento de RRT - 2 ou Mais Serviços</a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="status-14" href="status-14.html">Pendência no Status Via Protocolo </a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="status-15" href="status-15.html">Baixa Com Data de Término Após Previsão de Término do RRT</a>     
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="status-16" href="status-16.html">Baixa de RRT de CF sem RT Vinculada  <span class="badge badge-primary">Novo</span></a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="status-17" href="status-17.html">Baixa de RRT de CF com RT Vinculada <span class="badge badge-primary">Novo</span></a>
+                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="status-18" href="status-18.html">Cancelamento de RRT de Projeto com Entrega Assinalada  <span class="badge badge-primary">Novo</span></a>        
 
                             
-    
+                            
+         
                         
                         </div>
-
-                        <div class="row d-flex align-items-center mx-0">
-                            <h5 class="m-0 mt-2 mb-3 mr-2">Cancelamento:</h5>
-                        </div>
-                                                <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="cancelamento-01" href="cancelamento-01.html">Cancelamento Aprovado (e-mail)</a>
-                        <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="cancelamento-02" href="cancelamento-01.html">Cancelamento Sem Declaração de Óbito</a>
-
-
                     </div>
 
                     <!-- Main Section -->
@@ -258,43 +259,27 @@
  
 
                             <textarea id="despacho" class="form-control mb-3" rows="10" placeholder="Digite sua mensagem aqui...">
-<div><span><span id="intro_despacho_causp">I07 D </span><span id="n_despacho_causp">00</span></span></div>
+<div><span><span id="intro_despacho_causp">D </span><span id="n_despacho_causp">00</span></span></div> 
 <br>
 <div>Olá,</div>
 <br>
-<div>Seu registro já <strong>está interrompido</strong> desde <strong>XXXXXXXXXXXXX</strong>.</div>
+
+<div>Identificamos que este RRT foi preenchido para <strong>registrar a sua Responsabilidade</strong> Técnica pela empresa <strong>XXXXXXXXX</strong>, com a atividade <strong>3.7 – Desempenho de Cargo ou Função Técnica</strong>.</div>
 <br>
-<div>
-    📌 Por isso, <strong>este protocolo será arquivado</strong>, pois não há necessidade de nova solicitação.  
-</div>
+<div>A baixa do RRT <strong><u>encerra</u></strong> a sua participação na atividade técnica registrada, a partir da data informada. </div>
 <br>
-<div>
-    <strong>Sobre cobranças:</strong>
-</div>
-<div>
-    Se essa solicitação foi feita por conta de um aviso de cobrança, informamos que, conforme a <strong>Resolução nº 167/2018 – CAU/BR</strong>:  
-</div>
-<br>
-<div style="padding-left: 15px;">
-    "<i><strong>Art. 5º</strong> A existência de dívidas <strong>não impede</strong> a interrupção do registro no CAU.</i>  
-</div>
-<br>
-<div style="padding-left: 15px;">
-    <i><strong>Parágrafo único</strong>: A interrupção <strong>não extingue os débitos</strong> com o CAU, que continuarão sendo cobrados pelas vias administrativas e/ou judiciais.</i>"  
-</div>
-<br>
-<div>
-    <strong>Reativação do registro:</strong>  
-</div>
-<div>
-    Se você está exercendo a profissão e deseja <strong>reativar o registro</strong>, será necessário <strong>abrir um novo protocolo</strong> com o assunto <strong>“CADASTRO PROFISSIONAL > REATIVAÇÃO DE REGISTRO PROFISSIONAL”</strong>.  
-</div>
-<br>
-<div>
-    Dúvidas? Acesse o <a href="https://causp.gov.br/atendimento/" target="_blank">Canal de Atendimento</a> do CAU/SP.<br>
-</div><br><br>
-<div>Atenciosamente,</div>
-<div>Coordenação Técnica do Exercício Profissional – CAU/SP</div>
+<div>Para efetuá-la, é necessário indicar a <strong>data de término</strong>, ou seja, o dia em que você deixou de exercer a responsabilidade técnica pela empresa. Essa data deve corresponder à data de encerramento do vínculo constante do documento de desvinculação.</div>
+
+<br> 
+<div>📌 <strong>Para responder este protocolo, siga o caminho</strong>: </div>
+<br> 
+<div><span style="color: red; margin-left: 30px;">"<strong>SICCAU > Protocolo > Pesquisar Protocolo > Ver todos os dados > Responder Protocolo</strong>"</span> </div>
+<br> 
+<div>Em caso de dúvidas, acesse o <a href="https://causp.gov.br/atendimento/" target="_blank">Canal de Atendimento</a> do CAU/SP. </div>
+<br> 
+<br> 
+<div>Atenciosamente, </div>
+<div>Coordenação Técnica do Exercício Profissional – CAU/SP </div>
 </textarea>
 
                             <div class="mt-3 mb-4  text-center">
@@ -308,25 +293,7 @@
                     <!-- Right Sidebar -->
                     <div class="col-md-2 px-2 mb-4">
 
-                        <div class="list-group rounded mb-3">
-                            <div class="row d-flex align-items-center mx-0">
-                                <h5 class="m-0 mt-2 mb-3 mr-2">Reativação:</h5>
-                            </div>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="reativacao-01" href="reativacao-01.html">Reativação Aprovada</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="reativacao-02" href="reativacao-02.html">Registro Provisório</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="reativacao-03" href="reativacao-03.html">Débitos Financeiros</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="reativacao-04" href="reativacao-04.html">Mais de Uma Reativação no Ano - Pagamento da Taxa de Expediente</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="reativacao-05" href="reativacao-05.html">Pendência da Interrupção de Registro</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="reativacao-06" href="reativacao-06.html">Assunto de Protocolo Alterado <span class="badge badge-primary">Novo</span></a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="reativacao-07" href="reativacao-07.html">Encaminhamento ao GFIN (<strong>Tramitação Interna</strong>)</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="reativacao-08" href="reativacao-08.html">Encaminhamento ao DEF para análise de diploma (<strong>Tramitação Interna</strong>)</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="reativacao-09" href="reativacao-09.html">Encaminhamento ao DEF para inclusão de dados de formação. (<strong>Tramitação Interna</strong>)</a>
-                            <a class="list-group-item list-group-item-action atv_custom px-2 py-2" id="reativacao-10" href="reativacao-10.html">Envio de protocolo ao INAD - Erro no cálculo de anuidade (<strong>Tramitação Interna</strong>)</a>
-
-                                    
-                        </div>
-
-
+ 
 
                     </div>
 
